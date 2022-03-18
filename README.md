@@ -1,6 +1,6 @@
 # Ohelmistotekniikka, harjoitustyö
 
-Tässä on tekstiä **README** *tiedostoon*. :)
+Tässä on tekstiä **README** *tiedostoon*.
 
 ### Tehtävät
 
