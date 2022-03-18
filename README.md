@@ -4,7 +4,7 @@ Tässä on tekstiä **README** *tiedostoon*.
 
 ### Tehtävät
 
-###### Viikko 1
+#### Viikko 1
 
 [gitlog.txt](https://github.com/iidaw/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
