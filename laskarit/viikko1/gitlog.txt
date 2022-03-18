@@ -1,3 +1,5 @@
+Tässä kopioituna git log tulos:
+
 iidabjorn@Iida-MBP tiedostoja % git log --stat | cat
 commit dc55af38402e4e80c3f8a4595bda2a269d169c56
 Author: Iida Björn <iida.w.bjorn@gmail.com>
