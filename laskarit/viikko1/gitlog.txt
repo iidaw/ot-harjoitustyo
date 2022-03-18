@@ -1,0 +1,114 @@
+iidabjorn@Iida-MBP tiedostoja % git log --stat | cat
+commit dc55af38402e4e80c3f8a4595bda2a269d169c56
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 18:12:18 2022 +0200
+
+    file1 poistettu ja file2 muutettu file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 8c3778b8357496f7c363eedc52d213ff1590ba22
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 18:09:32 2022 +0200
+
+    lisätty hakemisto tiedostoja ja tiedostot file1, file2, file3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit fb56ba01b1f9f7cb37bf7a31d87febc4b65f13e1
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 18:05:00 2022 +0200
+
+    muutoksia kea.txt ja kolmas.txt
+
+ eka.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit e8cc3d120d1a8adf197d2bca31b4c41583070a8d
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 18:02:17 2022 +0200
+
+    tiedosto.txt muutettu eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1c0196240955c4d6e4fc78354fbbc1b84a981cf4
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:59:32 2022 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit cb6beb23c3ede76b592b88b96976980ecfb28f19
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:56:41 2022 +0200
+
+    tiedosto.txt muokattu
+
+ tiedosto.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 5877a04270af43e2c952f3cbc32d4b7b503cb75e
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:54:15 2022 +0200
+
+    tiedosto.txt lisätty tekstiä
+
+ tiedosto.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 3a9a22425137cd81e6f88693eb27c8bfb63b2ba3
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:46:22 2022 +0200
+
+    stuff ja testi.txt luotu
+
+ stuff/testi.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e636b66c118f177bf3df7b832279437e8e3d5cf3
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:45:19 2022 +0200
+
+    toinen.txt ja kolmas.txt muokattu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 616958395bb3f9175130188b21c0b1ec253c4410
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:44:09 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 049d028f7c43dfce8c2502f47276f26d2d083796
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:42:13 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 54f9d2f164b3efcd5b88f4fae3d0e03d0b368433
+Author: Iida Björn <iida.w.bjorn@gmail.com>
+Date:   Wed Mar 16 17:39:42 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+iidabjorn@Iida-MBP tiedostoja % 
