@@ -11,5 +11,10 @@ Tässä on tekstiä **README** *tiedostoon*.
 [komentorivi.txt](https://github.com/iidaw/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 
+
 #### Tuntikirjanpito
 [tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+
+#### Vaatimusmäärittely
+[vaatimusmaarittely.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
