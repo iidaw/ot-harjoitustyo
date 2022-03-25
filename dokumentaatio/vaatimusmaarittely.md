@@ -5,11 +5,6 @@ Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksist
 Sovelluksella on mahdollista luoda satunnaisia salasanoja käyttäjän toiveiden mukaisesti.
 Sovelluksessa on mahdollista olla usemapia rekisteröityneitä käyttäjiä.
 
-
-## Käyttäjät
-Alkuun sovelluksessa on ainoastaan yksi käyttäjärooli, *normaali käyttäjä*.
-
-
 ## Toiminnallisuudet
 
 ### Ennen kirjautumista
