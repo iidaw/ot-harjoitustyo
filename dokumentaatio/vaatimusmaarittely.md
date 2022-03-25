@@ -25,7 +25,3 @@ Alkuun sovelluksessa on ainoastaan yksi käyttäjärooli, *normaali käyttäjä*
 * Käyttäjä voi poistaa salasanoja/ käyttäjätunnuksia
 * Käyttäjä voi luoda "generoida" satunnaisen salasanan omien ehtojen mukaisesti
 * Käyttäjä voi kirjautua ulos järjestelmästä
-
-
-#### Linkki README.md tiedostoon
-[README.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/README.md)
