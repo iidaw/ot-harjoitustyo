@@ -2,16 +2,16 @@
 
 ## Sovelluksen tarkoitus
 Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksista sovelluksen avulla.
-Sovelluksella on mahdollista luoda satunnaisia salasanoja käyttäjän toiveiden mukaisesti.
-Sovelluksessa on mahdollista olla usemapia rekisteröityneitä käyttäjiä.
+Sovelluksella on mahdollista luoda satunnaisia salasanoja käyttäjän määritysten mukaisesti.
+Useampi käyttäjä voi käyttää sovellusta omilla tunnuksilla.
 
 ## Toiminnallisuudet
 
-### Ennen kirjautumista
-* Käyttäjä voi luoda sovellukseen käyttäjätunnuksen
-* Käyttäjä voi kirjautua sovellukseen
+### Kirjautumista varten
+* Käyttäjä voi luoda oman tunnuksen (käyttäjätunnus + salasana) sovellukseen
+* Käyttäjä voi kirjautua omilla tunnuksillaan sovellukseen
 
-### Kirjautumisen jälkeen
+### Käyttöä varten
 * Käyttäjä voi tarkastella omia salasanojaan ja käyttäjätunnuksiaan
 * Käyttäjä voi tallentaa salasanoja
 * Käyttäjä voi tallentaa käyttäjätunnuksia
