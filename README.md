@@ -2,9 +2,9 @@
 
 Tässä on tekstiä **README** *tiedostoon*.
 
-### Tehtävät
+## Tehtävät
 
-#### Viikko 1
+### Viikko 1
 
 [gitlog.txt](https://github.com/iidaw/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
@@ -12,9 +12,9 @@ Tässä on tekstiä **README** *tiedostoon*.
 
 
 
-#### Tuntikirjanpito
-[tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+## Dokumentaatio
+* [vaatimusmaarittely.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+* [tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 
-#### Vaatimusmäärittely
-[vaatimusmaarittely.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
