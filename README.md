@@ -13,8 +13,8 @@ Tässä on tekstiä **README** *tiedostoon*.
 
 
 ## Dokumentaatio
-* [vaatimusmaarittely.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[vaatimusmaarittely.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-* [tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+[tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 
