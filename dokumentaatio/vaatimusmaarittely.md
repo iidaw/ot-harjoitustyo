@@ -7,11 +7,11 @@ Useampi käyttäjä voi käyttää sovellusta omilla tunnuksilla.
 
 ## Toiminnallisuudet
 
-### Kirjautumista varten
+### Kirjautuminen
 * Käyttäjä voi luoda oman tunnuksen (käyttäjätunnus + salasana) sovellukseen
 * Käyttäjä voi kirjautua omilla tunnuksillaan sovellukseen
 
-### Käyttöä varten
+### Käyttö
 * Käyttäjä voi tarkastella omia salasanojaan ja käyttäjätunnuksiaan
 * Käyttäjä voi tallentaa salasanoja
 * Käyttäjä voi tallentaa käyttäjätunnuksia
