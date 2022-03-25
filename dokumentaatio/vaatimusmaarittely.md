@@ -8,8 +8,8 @@ Sovelluksessa on mahdollista olla usemapia rekisteröityneitä käyttäjiä.
 ## Toiminnallisuudet
 
 ### Ennen kirjautumista
-* Käyttäjä voi luoda järjestelmään käyttäjätunnuksen
-* Käyttäjä voi kirjautua järjestelmään
+* Käyttäjä voi luoda sovellukseen käyttäjätunnuksen
+* Käyttäjä voi kirjautua sovellukseen
 
 ### Kirjautumisen jälkeen
 * Käyttäjä voi tarkastella omia salasanojaan ja käyttäjätunnuksiaan
