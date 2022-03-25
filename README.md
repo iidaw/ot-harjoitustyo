@@ -9,3 +9,7 @@ Tässä on tekstiä **README** *tiedostoon*.
 [gitlog.txt](https://github.com/iidaw/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 [komentorivi.txt](https://github.com/iidaw/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+
+#### Tuntikirjanpito
+[tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
