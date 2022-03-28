@@ -16,7 +16,6 @@ Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 * Käyttäjä voi tallentaa salasanoja
 * Käyttäjä voi tallentaa käyttäjätunnuksia
 * Käyttäjä voi tallentaa sivustoja/ appeja joihin käyttäjätunnus ja salasana kuuluu
-* Käyttäjä voi muokata salasanoja/ käyttäjätunnuksia
 * Käyttäjä voi poistaa salasanoja/ käyttäjätunnuksia
 * Käyttäjä voi luoda/ "generoida" satunnaisen salasanan omien ehtojen mukaisesti
 * Käyttäjä voi kirjautua ulos järjestelmästä
