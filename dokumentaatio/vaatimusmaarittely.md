@@ -5,6 +5,9 @@ Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksist
 Sovelluksella on mahdollista luoda satunnaisia salasanoja käyttäjän määritysten mukaisesti.
 Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 
+## Käyttäjät
+* Ainakin alkuun vain tavallisia käyttäjiä, jotka näkevät omat tietonsa
+
 ## Toiminnallisuudet
 
 ### Kirjautuminen
@@ -17,5 +20,5 @@ Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 * Käyttäjä voi tallentaa käyttäjätunnuksia
 * Käyttäjä voi tallentaa sivustoja/ appeja joihin käyttäjätunnus ja salasana kuuluu
 * Käyttäjä voi poistaa salasanoja/ käyttäjätunnuksia
-* Käyttäjä voi luoda/ "generoida" satunnaisen salasanan omien ehtojen mukaisesti
+* Käyttäjä voi luoda/ "generoida" satunnaisen salasanan omien määritysten mukaisesti
 * Käyttäjä voi kirjautua ulos järjestelmästä
