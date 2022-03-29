@@ -6,7 +6,7 @@ Sovelluksella on mahdollista luoda satunnaisia salasanoja käyttäjän määrity
 Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 
 ## Käyttäjät
-* Ainakin alkuun vain tavallisia käyttäjiä, jotka näkevät omat tietonsa
+* Tavallisia käyttäjiä, jotka näkevät omat tietonsa
 
 ## Toiminnallisuudet
 
