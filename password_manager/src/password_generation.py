@@ -37,6 +37,4 @@ class PasswordGenerator:
 if __name__ == "__main__":
     generate = PasswordGenerator()
     pw = generate.ask_length()
-    length = len(pw)
     print(f"Generated password: {pw}")
-    print(f"Length: {length}")
