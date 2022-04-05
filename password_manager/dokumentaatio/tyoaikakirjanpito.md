@@ -3,3 +3,7 @@
 |  päivä  |  aika  |      mitä tein      |
 |---------|--------|---------------------|
 |28.3.    |1h      |vaatimusmäärittelyn tekeminen ja sovelluksen suunnittelua|
+|31.3.    |0,5h    |tkinteriin tutustumista|
+|31.3.    |0,5h    |salasanageneraattorin koodin kirjoittaminen|
+|4.4.     |2h      |ui:n tekemistä
+|5.4.     |2h      |testin tekemistä, testikattavuusraportti, invoke tehtävien tekemistä|
