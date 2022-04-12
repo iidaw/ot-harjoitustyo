@@ -5,6 +5,5 @@ htmlcov
 .DS_Store
 .coverage
 
-# data files
 test.db
 users.db
