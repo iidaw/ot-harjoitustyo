@@ -8,4 +8,5 @@
 
 [changelog.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/password_manager/dokumentaatio/changelog.md)
 
+[arkkitehtuuri.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/password_manager/dokumentaatio/arkkitehtuuri.md)
 
