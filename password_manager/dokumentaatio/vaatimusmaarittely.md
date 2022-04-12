@@ -16,9 +16,7 @@ Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 
 ### Käyttö
 * Käyttäjä voi tarkastella omia salasanojaan ja käyttäjätunnuksiaan
-* Käyttäjä voi tallentaa salasanoja
-* Käyttäjä voi tallentaa käyttäjätunnuksia
-* Käyttäjä voi tallentaa sivustoja/ appeja joihin käyttäjätunnus ja salasana kuuluu
+* Käyttäjä voi tallentaa salasanatietoja (sivusto/appi, käyttäjätunnus, salasana)
 * Käyttäjä voi poistaa salasanoja/ käyttäjätunnuksia
-* Käyttäjä voi luoda/ "generoida" satunnaisen salasanan omien määritysten mukaisesti
+* Käyttäjä voi luoda/ "generoida" satunnaisen salasanan omien määritysten mukaisesti  (tehty)
 * Käyttäjä voi kirjautua ulos järjestelmästä
