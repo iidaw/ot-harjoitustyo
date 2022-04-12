@@ -4,7 +4,7 @@
 ## Dokumentaatio
 [vaatimusmaarittely.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+[tyoaikakirjanpito.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/password_manager/dokumentaatio/tyoaikakirjanpito.md)
 
 [changelog.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/password_manager/dokumentaatio/changelog.md)
 
