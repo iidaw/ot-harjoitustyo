@@ -9,3 +9,5 @@
 * Sovelluslogiikka ja salasanan generointi käyttöliittymässä
 * Lisätty tietokannat
 * Jokseenkin toimiva käyttöliittymä
+
+* Testauksessa tietokannat toimivat, mutta en saanut sitä vielä toimimaan käyttöliittymän kanssa
