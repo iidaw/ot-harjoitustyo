@@ -8,6 +8,5 @@
 ## Viikko 4
 * Sovelluslogiikka ja salasanan generointi käyttöliittymässä
 * Lisätty tietokannat
+* Tietokannat tallentavat uudet käyttäjät ja käyttäjiä voi hakea (testeissä), mutta ei toimi vielä käyttöliittymän kanssa
 * Jokseenkin toimiva käyttöliittymä
-
-* Testauksessa tietokannat toimivat, mutta en saanut sitä vielä toimimaan käyttöliittymän kanssa
