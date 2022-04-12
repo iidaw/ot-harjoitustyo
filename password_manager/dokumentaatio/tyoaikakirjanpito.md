@@ -7,3 +7,5 @@
 |31.3.    |0,5h    |salasanageneraattorin koodin kirjoittaminen|
 |4.4.     |2h      |ui:n tekemistä
 |5.4.     |2h      |testin tekemistä, testikattavuusraportti, invoke tehtävien tekemistä|
+|7.4.     |6h      |ui:n tekemistä (näytöt toimivat) + toiminnallisuutta|
+|12.4.    |5h      |testien tekemistä + tietokantojen luomista|
