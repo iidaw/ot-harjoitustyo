@@ -12,9 +12,9 @@
 
 
 ## Komentorivitoiminnot
-1. Asenna riippuvuudet komennolla: poetry install
-2. Ohjelman käynnistys: poetry run invoke start
-3. Testit komennolla: poetry run invoke test
-4. Testikattavuus: poetry run invoke coverage-report
-5. Koodin automaattinen formatointi: poetry run invoke format
-6. Pylint automaattinen laatutarkistus: poetry run invoke lint
+1. Asenna riippuvuudet komennolla: _poetry install_
+2. Ohjelman käynnistys: _poetry run invoke start_
+3. Testit komennolla: _poetry run invoke test_
+4. Testikattavuus: _poetry run invoke coverage-report_
+5. Koodin automaattinen formatointi: _poetry run invoke format_
+6. Pylint automaattinen laatutarkistus: _poetry run invoke lint_
