@@ -1,5 +1,10 @@
 .pytest_cache
 __pycache__
-.coverage
-.DS_Store
 htmlcov
+.vscode
+.DS_Store
+.coverage
+
+# data files
+test.db
+users.db
