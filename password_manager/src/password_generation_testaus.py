@@ -5,13 +5,12 @@ import string
 class PasswordGenerator:
     def __init__(self):
         self.password = []
-        
+        self.password_length = int
 
     def ask_length(self):
         self.password_length = int(input("Enter length (number): "))
 
         return self.generate_password(self.password_length)
-        
 
     def generate_password(self, length):
         all_char = string.ascii_letters + string.digits + string.punctuation
@@ -36,5 +35,5 @@ class PasswordGenerator:
 
 if __name__ == "__main__":
     generate = PasswordGenerator()
-    pw = generate.ask_length()
-    print(f"Generated password: {pw}")
+    pword = generate.ask_length()  # pylint: disable=invalid-name
+    print(f"Generated password: {pword}")  # pylint: disable=invalid-name

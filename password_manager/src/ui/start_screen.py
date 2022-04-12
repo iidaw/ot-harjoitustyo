@@ -1,26 +1,52 @@
-from tkinter import Tk, ttk, constants
+from tkinter import ttk, constants
+from ui.create_user_view import CreateUserView
+from ui.login_view import LoginView
+from ui.password_gen_view import PasswordGeneratorView
+
 
 class StartScreen:
-    def __init__(self, root):
+    def __init__(self, root, show_login_view, show_create_user_view, show_password_gen_view):
         self.root = root
+        #self.login = login
+        #self.create_user = create_user
+        self.frame = None
+        self.show_login_view = show_login_view
+        self.show_create_user_view = show_create_user_view
+        #self.show_password_gen_view = show_password_gen_view
+        self.show_password_gen_view = show_password_gen_view
 
-    def start_screen(self):
-        start_label = ttk.Label(self.root, text="Log in or create user")
-        start_label.grid(row=0, column=0, columnspan=2)
+        self.initialize()
 
-        login_button = ttk.Button(self.root, text="Log in")
-        login_button.grid(row=2, column=0)
+    def pack(self):
+        self.frame.pack(fill=constants.X)
 
-        create_user_button = ttk.Button(self.root, text="Create user")
-        create_user_button.grid(row=2, column=1)
+    def destroy(self):
+        if self.frame:
+            self.frame.destroy()
 
-        generate_password_button = ttk.Button(self.root, text="Generate Password")
-        generate_password_button.grid(row=3, column=0, columnspan=2)
+    def initialize(self):
+        self.frame = ttk.Frame(master=self.root)
+
+        start_label = ttk.Label(
+            master=self.frame, text="Log in or create user")
+        start_label.grid(row=0, column=0, columnspan=2, sticky=constants.W)
+
+        empty_label = ttk.Label(master=self.frame, text="")
+        empty_label.grid(row=2, column=0)
+
+        login_button = ttk.Button(
+            master=self.frame, text="Log in", command=self.show_login_view)
+        login_button.grid(row=3, column=0, sticky=constants.EW)
 
 
-window = Tk()
-#window.geometry("600x400")
-window.title("Password Manager")
-startscreen = StartScreen(window)
-startscreen.start_screen()
-window.mainloop()
+# create userissa on joku vika
+        create_user_button = ttk.Button(
+            master=self.frame, text="Create user", command=self.show_create_user_view)
+        create_user_button.grid(row=4, column=0, sticky=constants.EW)
+
+        generate_password_button = ttk.Button(
+            master=self.frame, text="Generate Password", command=self.show_password_gen_view)
+        generate_password_button.grid(
+            row=5, column=0, columnspan=2, sticky=constants.EW)
+
+        self.frame.grid_columnconfigure(0, weight=1, minsize=300)

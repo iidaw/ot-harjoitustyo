@@ -15,3 +15,17 @@ def coverage(ctx):
 @task(coverage)
 def coverage_report(ctx):
     ctx.run("coverage html", pty=True) #toimii
+
+@task
+def format(ctx):  # pylint: disable=redefined-builtin
+    ctx.run("autopep8 --in-place --recursive src", pty=True)
+
+#tähän pitäis saada yhdistys tietokantaan!!
+@task
+def build(ctx):
+    ctx.run("python3 src/build.py", pty=True) #toimii ehkä
+
+@task
+def lint(ctx):
+    ctx.run("pylint src", pty=True)
+    

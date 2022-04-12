@@ -1,5 +1,16 @@
-from password_generation import PasswordGenerator
+from tkinter import Tk
+from ui.ui import UI
 
-generate = PasswordGenerator()
-pw = generate.ask_length()
-print(f"Generated password: {pw}")
+
+def main():
+    window = Tk()
+    window.title("Password manager")
+
+    ui_view = UI(window)
+    ui_view.start()
+
+    window.mainloop()
+
+
+if __name__ == '__main__':
+    main()
