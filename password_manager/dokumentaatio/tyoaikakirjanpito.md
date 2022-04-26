@@ -9,3 +9,6 @@
 |5.4.     |2h      |testin tekemistä, testikattavuusraportti, invoke tehtävien tekemistä|
 |7.4.     |6h      |ui:n tekemistä (näytöt toimivat) + toiminnallisuutta|
 |12.4.    |5h      |testien tekemistä + tietokantojen luomista|
+|19.4.    |2h      |bugien selvittelyä|
+|25.4.    |3h      |käyttäjätunnuksen ja kirjautumisen koodien tekemistä + ui:n korjauksia|
+|26.4.    |2h      |testien tekemistä|
