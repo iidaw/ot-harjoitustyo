@@ -10,3 +10,8 @@
 * Lisätty tietokannat
 * Tietokannat tallentavat uudet käyttäjät ja käyttäjiä voi hakea (testeissä), mutta ei toimi vielä käyttöliittymän kanssa
 * Jokseenkin toimiva käyttöliittymä
+
+
+## Viikko 5
+* Käyttäjä voi luoda käyttäjätunnuksen
+* Käyttäjä voi kirjautua sisään tunnuksilla
