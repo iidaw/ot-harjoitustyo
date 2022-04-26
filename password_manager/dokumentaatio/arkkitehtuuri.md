@@ -2,6 +2,8 @@
 
 ## Päätoiminnallisuudet
 Sekvenssikaavio käyttäjän sisäänkirjautumisesta:
+
+
 <img width="609" alt="Näyttökuva 2022-4-26 kello 21 11 48" src="https://user-images.githubusercontent.com/90407612/165364996-aec054e7-8ddd-43f4-ad32-9f53f73ca5a8.png">
 
 Kirjautumisnäkymässä kenttiin kirjoitetaan käyttäjätunnus ja salasana, jonka jälkeen klikataan "Login" painiketta. Painikkeen tapahtumankäsittelijä kutsuu sovelluslogiikan Service:n avulla, ja sillä tarkistetaan, onko käyttäjätunnusta ja salasanaa olemassa. Jos käyttäjätunnus ja salasana löytyvät vaihtuu näkymäksi show_add_password_view().
