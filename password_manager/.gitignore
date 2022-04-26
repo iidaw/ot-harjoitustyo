@@ -7,3 +7,4 @@ htmlcov
 
 test.db
 users.db
+passwords.db

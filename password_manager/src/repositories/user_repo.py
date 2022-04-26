@@ -3,18 +3,17 @@ from entities.user import User
 from database_connection import get_database_connection
 #from init_database import init_database
 
-# mahollisesti joku ongelma, ku osa valkosena
-
 
 def user_by_row(row):
     return User(row["username"], row["password"] if row else None)
 
 
 class UserRepo:
-    def __init__(self, connection):
+    def __init__(self, connection=get_database_connection()):
         self.connection = connection
 
-    def create_user(self, user):
+    def create_user(self, user: User):
+        # print(":)") testausta varten
         cursor = self.connection.cursor()
 
         cursor.execute("INSERT INTO Users (username, password) values (?,?)", [
@@ -44,4 +43,4 @@ class UserRepo:
         self.connection.commit()
 
 
-user_repository = UserRepo(get_database_connection())
+#user_repository = UserRepo(get_database_connection())

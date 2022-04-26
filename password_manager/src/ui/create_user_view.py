@@ -1,10 +1,11 @@
 from tkinter import ttk, constants
-from service.service import UserService
+from service.service import Service
 from repositories.user_repo import UserRepo
+from entities.user import User
 
 
 class CreateUserView:
-    def __init__(self, root, handle_login, handle_create_user, show_start_view):
+    def __init__(self, root, handle_login, handle_create_user, show_start_view, user_repo: UserRepo):
         self.root = root
         self.handle_login = handle_login
         self.handle_create_user = handle_create_user
@@ -12,6 +13,7 @@ class CreateUserView:
         self.frame = None
         self.username_entry = None
         self.password_entry = None
+        self.user_repo = user_repo
 
         self.initialize()
 
@@ -27,8 +29,7 @@ class CreateUserView:
         username = self.username_entry.get()
         password = self.password_entry.get()
 
-        UserService.create_user(username, password)
-        self.handle_create_user()
+        self.user_repo.create_user(User(username, password))
 
     def initialize(self):
         self.frame = ttk.Frame(master=self.root)
@@ -48,9 +49,11 @@ class CreateUserView:
         self.password_entry = ttk.Entry(master=self.frame)
         self.password_entry.grid(row=4, column=0, sticky=constants.EW)
 
-        login_button = ttk.Button(master=self.frame, text="Create", command=UserRepo.create_user(
-            self.username_entry.get, self.password_entry.get()))
-        login_button.grid(row=5, column=0, sticky=constants.EW)
+        create_button = ttk.Button(
+            master=self.frame, text="Create", command=self.create_user_handle)
+        create_button.grid(row=5, column=0, sticky=constants.EW)
+
+        # pitäiskö tulla joku ilmotus jos käyttäjä on lisätty
 
         back_button = ttk.Button(
             master=self.frame, text="Back", command=self.show_start_view)

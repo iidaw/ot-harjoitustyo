@@ -3,6 +3,7 @@
 from entities.user import User
 
 from repositories.user_repo import UserRepo
+from repositories.info_repo import InfoRepo
 
 
 # class PasswordService:
@@ -10,15 +11,19 @@ from repositories.user_repo import UserRepo
 #      self._user = None
 
 # def add_info(self, site, username, password):
-#    info = Info(user = self._user, site=site, username=username, password = password)
+#    info = Info(user=self._user, site=site, username=username, password=password)
 
 #   return info
 
 
-class UserService:
-    def __init__(self, user_repo=UserRepo):
+class Service:
+    def __init__(self, user_repo: UserRepo, info_repo: InfoRepo):
         self._user = None
         self._user_repo = user_repo
+        self.info_repo = info_repo
+
+    # def add_information(self):
+      #  information = Info(site, username, password)
 
     def login(self, username, password):
         user = self._user_repo.find_by_username(username)
@@ -30,7 +35,7 @@ class UserService:
         return user
 
     def get_current_user(self):
-        pass
+        return self._user
 
     def get_all_users(self):
         return self._user_repo.find_all_users()
@@ -53,7 +58,7 @@ class UserService:
 
 
 #password_service = PasswordService()
-user_service = UserService()
+#user_service = UserService()
 
 
 # kesken

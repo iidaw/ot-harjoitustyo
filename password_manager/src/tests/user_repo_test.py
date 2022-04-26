@@ -1,7 +1,7 @@
 import unittest
 from repositories.user_repo import UserRepo
 from entities.user import User
-from database_connection import get_database_connection, get_database_connection_test
+from database_connection import get_database_connection_test
 from init_database import init_database_test
 
 

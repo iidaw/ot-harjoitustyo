@@ -6,9 +6,11 @@ from ui.add_passwords_view import AddPasswordView
 
 
 class UI:
-    def __init__(self, root):
+    def __init__(self, root, user_repo, service):
         self.root = root
         self.current_view = None
+        self.user_repo = user_repo
+        self.service = service
 
     def start(self):
         self.show_start_view()
@@ -51,7 +53,7 @@ class UI:
         self.hide_current_view()
 
         self.current_view = LoginView(
-            self.root, self.handle_create_user, self.handle_password, self.show_start_view)
+            self.root, self.handle_create_user, self.handle_password, self.show_start_view, self.service)
 
         self.current_view.pack()
 
@@ -59,7 +61,7 @@ class UI:
         self.hide_current_view()
 
         self.current_view = CreateUserView(
-            self.root, self.handle_login, self.handle_create_user, self.show_start_view)
+            self.root, self.handle_login, self.handle_create_user, self.show_start_view, self.user_repo)
 
         self.current_view.pack()
 

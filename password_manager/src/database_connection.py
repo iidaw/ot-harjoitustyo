@@ -1,6 +1,9 @@
 import sqlite3
 #from config import DATABASE_FILE_PATH
 
+connection = sqlite3.connect("users.db")
+connection.row_factory = sqlite3.Row
+
 
 # testausta varten
 def get_database_connection_test():
@@ -12,9 +15,6 @@ def get_database_connection_test():
 
 # kirjautumista varten
 def get_database_connection():
-
-    connection = sqlite3.connect("users.db")
-    connection.row_factory = sqlite3.Row
 
     return connection
 

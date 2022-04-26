@@ -1,67 +1,55 @@
-
-import sqlite3
 from entities.save_info import Info
+from database_connection import get_database_connection_info
 
 # kesken
 
 
+def info_by_row(row):
+    return Info(row["site"], row["username"], row["password"] if row else None)
+
+
 class InfoRepo:
-    def __init__(self, passwords):
-        self.db = sqlite3.connect(passwords)
-        self.db.isolation_level = None
+    def __init__(self, connection=get_database_connection_info()):
+        self.connection = connection
 
-        self.passwords = passwords
+    def create_password_info(self, info: Info):
+        cursor = self.connection.cursor()
+        cursor.execute("INSERT INTO Passwords (site, username, password) VALUES (?,?)", [
+                       info.site, info.username, info.password])
 
-    def create_pw_table(self):
-        self.db.execute("BEGIN")
-        self.db.execute(
-            "CREATE TABLE IF NOT EXISTS Passwords (id INTEGER PRIMARY KEY, site TEXT, username TEXT, password TEXT)")
-        self.db.execute("COMMIT")
-
-    def create_password(self, passwords: Info):
-        self.db.execute("BEGIN")
-        self.db.execute("INSERT INTO Passwords (site, username, password) VALUES (?,?)", [
-                        passwords.site, passwords.username, passwords.password])
-        self.db.execute("COMMIT")
+        self.connection.commit()
 
         # tähän joku korjaus, että saa ton komennon toimimaan!!
 
-        return passwords
+        return info
 
     def find_all_passwords(self):
-        self.db.execute("BEGIN")
-        all_passwords = self.db.execute("SELECT * FROM Passwords").fetchall()
-        self.db.execute("COMMIT")
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Passwords")
+        rows = cursor.fetchall()
 
-        return all_passwords
+        return list(map(info_by_row, rows))
 
     def find_by_site(self, site):
-        self.db.execute("BEGIN")
-        password_by_site = self.db.execute(
-            "SELECT * FROM Passwords WHERE site = ?", [site]).fetchone()
-        self.db.execute("COMMIT")
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Passwords WHERE site = ?", [site])
 
-        return password_by_site
+        row = cursor.fetchone()
+
+        return info_by_row(row)
 
     def delete_table(self):
-        self.db.execute("BEGIN")
-        self.db.execute("DROP TABLE Passwords")
-        self.db.execute("COMMIT")
+        pass
 
-    def delete_passwords(self):
-        self.db.execute("BEGIN")
-        self.db.execute("DELETE FROM Passwords")
-        self.db.execute("COMMIT")
-
-    # def login(self):
-     #   valid = False
-      #  users = self.find_all_users()
-
-       # if self.user in users:
-        #    if self.password ==
+    def delete_password_info(self):
+        cursor = self.connection.cursor()
+        cursor.execute("DELETE FROM Passwords")
+        self.connection.commit()
 
 
 if __name__ == '__main__':
     #info_repo = InfoRepo()
-    #info_repo.create_pw_table()
+    # info_repo.create_pw_table()
     pass
+
+# pitäis kai lisätä vielä jotain
