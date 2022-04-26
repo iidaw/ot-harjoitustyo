@@ -10,6 +10,8 @@
 
 [arkkitehtuuri.md](https://github.com/iidaw/ot-harjoitustyo/blob/master/password_manager/dokumentaatio/arkkitehtuuri.md)
 
+[release](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko5)
+
 
 ## Komentorivitoiminnot
 1. Suorita komento: _poetry run invoke build_
