@@ -11,8 +11,8 @@ Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 ## Toiminnallisuudet
 
 ### Kirjautuminen
-* Käyttäjä voi luoda oman tunnuksen (käyttäjätunnus + salasana) sovellukseen
-* Käyttäjä voi kirjautua omilla tunnuksillaan sovellukseen
+* Käyttäjä voi luoda oman tunnuksen (käyttäjätunnus + salasana) sovellukseen   (tehty)
+* Käyttäjä voi kirjautua omilla tunnuksillaan sovellukseen   (tehty)
 
 ### Käyttö
 * Käyttäjä voi tarkastella omia salasanojaan ja käyttäjätunnuksiaan
