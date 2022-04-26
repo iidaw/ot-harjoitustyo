@@ -12,3 +12,4 @@
 |19.4.    |2h      |bugien selvittelyä|
 |25.4.    |3h      |käyttäjätunnuksen ja kirjautumisen koodien tekemistä + ui:n korjauksia|
 |26.4.    |2h      |testien tekemistä|
+|yht.     |24h     | |
