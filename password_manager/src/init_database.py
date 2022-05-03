@@ -2,27 +2,27 @@ from database_connection import get_database_connection, get_database_connection
 
 
 def drop_tables(connection):
-    """Poistaa tietokantataulut.
+    """Poistaa tietokantataulut
     Args:
-        connection (Connection): tietokantayhteyden Connection-olio.
+        connection: tietokantayhteyden Connection-olio
     """
 
     cursor = connection.cursor()
     cursor.execute('''
-        drop table if exists Users;
+        DROP TABLE IF EXISTS Users;
     ''')
 
     cursor.execute('''
-        drop table if exists Passwords;
+        DROP TABLE IF EXISTS Passwords;
     ''')
 
     connection.commit()
 
 
 def create_tables(connection):
-    """Luo tietokantataulut.
+    """Luo tietokantataulut
     Args:
-        connection (Connection): tietokantayhtdyden Connection-olio.
+        connection: tietokantayhteyden Connection-olio
     """
 
     cursor = connection.cursor()
@@ -34,11 +34,11 @@ def create_tables(connection):
     ''')
 
     cursor.execute('''
-        create table Passwords (
-            site text primary key,
-            username text,
-            password text,
-            user integer references users
+        CREATE TABLE Passwords (
+            site TEXT PRIMARY KEY,
+            username TEXT,
+            password TEXT,
+            user INTEGER REFERENCES Users
         );
     ''')
 
@@ -46,7 +46,7 @@ def create_tables(connection):
 
 
 def initialize_database():
-    """Alustaa tietokantataulut.
+    """Alustaa tietokantataulut
     """
 
     connection = get_database_connection()
