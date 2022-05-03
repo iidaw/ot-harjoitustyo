@@ -1,11 +1,17 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, messagebox
 from entities.user import User
-from service.service import Service
+from service.service import Service, InvalidCredentialsError
 #from ui.add_passwords_view import AddPasswordView
 
 
 class LoginView:
+    """Luokka vastaa kirjautumisnäkymästä
+    """
+
     def __init__(self, root, handle_create_user, handle_login, show_start_view, service: Service):
+        """Luokan konstruktori
+        """
+
         self.root = root
         self.handle_create_user = handle_create_user
         self.handle_login = handle_login
@@ -18,24 +24,37 @@ class LoginView:
         self.initialize()
 
     def pack(self):
+        """Näyttää näkymän"""
         if self.frame:
             self.frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa näkymän"""
         if self.frame:
             self.frame.destroy()
 
     def login_handler(self):
+        """Vastaa käyttäjän sisäänkirjaamisesta, varsinaisesta toiminnallisuudesta vastaa luokka Service
+        """
+
         username = self.username_entry.get()
         password = self.password_entry.get()
 
-        self.service.login(username, password)
-        self.handle_login()
+        try:
+            self.service.login(username, password)
+            self.handle_login()
 
-        # toimii ehkä
+        except InvalidCredentialsError:
+            messagebox.showerror("Invalid credentials",
+                                 "Invalid username or password")
+
+        #self.service.login(username, password)
+        # self.handle_login()
 
     def initialize(self):
-        # print(self.root) testausta varten
+        """Vastaa kirjautumisnäkymän asettelusta
+        """
+
         self.frame = ttk.Frame(master=self.root)
 
         label = ttk.Label(master=self.frame,
@@ -54,7 +73,7 @@ class LoginView:
         password_label.grid(row=4, column=0, sticky=constants.W)
 
         self.password_entry = ttk.Entry(
-            master=self.frame)
+            master=self.frame, show="*")
         self.password_entry.grid(
             row=5, column=0, columnspan=2, sticky=constants.EW)
 
@@ -66,4 +85,4 @@ class LoginView:
             master=self.frame, text="Back", command=self.show_start_view)
         back_button.grid(row=7, column=0, sticky=constants.EW)
 
-        self.frame.grid_columnconfigure(0, weight=1, minsize=300)
+        self.frame.grid_columnconfigure(0, weight=1, minsize=500)

@@ -1,8 +1,14 @@
 import sqlite3
-#from config import DATABASE_FILE_PATH
+from config import DATABASE_FILE_PATH
 
-connection = sqlite3.connect("users.db")
-connection.row_factory = sqlite3.Row
+CONNECTION = sqlite3.connect(DATABASE_FILE_PATH)
+CONNECTION.row_factory = sqlite3.Row
+
+
+def get_database_connection():
+    """palauttaa yhteyden tietokantaan
+    """
+    return CONNECTION
 
 
 # testausta varten
@@ -11,18 +17,3 @@ def get_database_connection_test():
     connection_test.row_factory = sqlite3.Row
 
     return connection_test
-
-
-# kirjautumista varten
-def get_database_connection():
-
-    return connection
-
-
-# salasanatietojen tallennusta varten
-def get_database_connection_info():
-
-    connection_info = sqlite3.connect("passwords.db")
-    connection_info.row_factory = sqlite3.Row
-
-    return connection_info

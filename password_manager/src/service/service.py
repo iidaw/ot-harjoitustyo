@@ -2,22 +2,37 @@
 #from entities.save_info import Info
 from entities.user import User
 
-from repositories.user_repo import UserRepo
-from repositories.info_repo import InfoRepo
+from repositories.user_repo import (UserRepo as default_user_repo)
+from repositories.info_repo import (InfoRepo as default_info_repo)
 
 
-# class PasswordService:
-#   def __init__(self):
-#      self._user = None
+class InvalidCredentialsError(Exception):
+    """Luokka, joka tuottaa virheen jos käyttäjänimi ja/tai salasana on virheellinen
+    Args:
+        Exception
+    """
 
-# def add_info(self, site, username, password):
-#    info = Info(user=self._user, site=site, username=username, password=password)
 
-#   return info
+class UsernameExistsError(Exception):
+    """Luokka, joka tuottaa virheen jos käyttäjätunnus on jo olemassa
+    Args:
+        Exception
+    """
 
 
 class Service:
-    def __init__(self, user_repo: UserRepo, info_repo: InfoRepo):
+    """Luokka, joka vastaa sovelluslogiikasta
+    """
+
+    def __init__(self, user_repo=default_user_repo, info_repo=default_info_repo):
+        """Luokan konstruktori
+
+        Args:
+            user_repo: Olio, jollaa UserRepoa vastaavat metodit
+
+            info_repo: olio, jolla InfoRepoa vastaavat metodit
+            """
+
         self._user = None
         self._user_repo = user_repo
         self.info_repo = info_repo
@@ -26,28 +41,51 @@ class Service:
       #  information = Info(site, username, password)
 
     def login(self, username, password):
+        """Kirjaa käyttäjän sisään
+
+        Args:
+            username: Merkkijono, joka kuvaa kirjautuvaa käyttäjätunnusta
+
+            password: Merkkijono, joka kuvaa käyttäjän salasanaa
+
+        Returns: Palauttaa kirjautuneen käyttäjän User-oliona
+        """
+
         user = self._user_repo.find_by_username(username)
 
         if not user or user.password != password:
-            return "Invalid username or password"
+            raise InvalidCredentialsError("Invalid password or username")
 
         self._user = user
         return user
 
     def get_current_user(self):
+        """Palauttaa kirjautuneen käyttäjän
+
+        Returns: Palauttaa kirjautuneen käyttäjän User-oliona
+        """
+
         return self._user
 
+        # miten tän saa toimimaan niin, että ottaa "päällä olevan" käyttäjän
+
     def get_all_users(self):
+        """Palauttaa kaikki käyttäjät
+
+        Returns: Kaikki käyttäjät
+        """
+
         return self._user_repo.find_all_users()
 
     def logout(self):
         self._user = None
 
     def create_user(self, username, password, login=True):
+
         existis = self._user_repo.find_by_username(username)
 
         if existis:
-            return "Username existis"
+            raise UsernameExistsError(f"Username {username} already exists")
 
         user = self._user_repo.create_user(User(username, password))
 
@@ -55,6 +93,21 @@ class Service:
             self._user = user
 
         return user
+
+        # pärjäiskö ilman tätä ^^ ei oo kai käytössä just missään
+
+    def find_passwords_by_user(self, user):
+        passwords = self.info_repo.find_passwords_by_user(user)
+
+        return passwords
+
+    def add_password_info(self, info):
+        new_password = self.info_repo.create_password_info(info)
+
+        return new_password
+
+
+service = Service()
 
 
 #password_service = PasswordService()

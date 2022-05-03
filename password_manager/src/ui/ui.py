@@ -6,11 +6,15 @@ from ui.add_passwords_view import AddPasswordView
 
 
 class UI:
-    def __init__(self, root, user_repo, service):
+    """Luokka vastaa käyttöliittymän toiminnasta ja siitä, miten näkymät vaihtuvat
+    """
+
+    def __init__(self, root, user_repo, service, info_repo):
         self.root = root
         self.current_view = None
         self.user_repo = user_repo
         self.service = service
+        self.info_repo = info_repo
 
     def start(self):
         self.show_start_view()
@@ -68,7 +72,8 @@ class UI:
     def show_add_password_view(self):
         self.hide_current_view()
 
-        self.current_view = AddPasswordView(self.root)
+        self.current_view = AddPasswordView(
+            self.root, self.service, self.info_repo, self.show_start_view)
 
         self.current_view.pack()
 

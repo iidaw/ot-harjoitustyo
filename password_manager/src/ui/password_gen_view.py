@@ -2,7 +2,7 @@ from tkinter import END, ttk, constants
 import string
 import random
 
-#from password_generation import generate_password
+# yritä erottaa generate_password käyttöliittymäosasta
 
 
 class PasswordGeneratorView:
@@ -17,9 +17,11 @@ class PasswordGeneratorView:
         self.init_frame()
 
     def pack(self):
+        """Näyttää näkymän"""
         self.frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa näkymän"""
         self.frame.destroy()
 
     def password_gen(self):
@@ -58,7 +60,7 @@ class PasswordGeneratorView:
 
         self.password_gen()
 
-        self.frame.grid_columnconfigure(0, weight=1, minsize=300)
+        self.frame.grid_columnconfigure(0, weight=1, minsize=500)
 
     def generate_password(self):
         self.password_entry.delete(0, END)
@@ -75,7 +77,7 @@ class PasswordGeneratorView:
         password.append(random.choice(string.punctuation))
 
         # loput
-        for i in range(1, password_length - 3):
+        for _ in range(1, password_length - 3):
             if len(password) < password_length:
                 password.append(random.choice(all_char))
 

@@ -22,11 +22,20 @@ class TestService(unittest.TestCase):
         #all_users = self.user_repository.find_all_users()
         self.assertEqual("iida", self.user_iida.username)
 
-    def test_get_current_user(self):
+    def test_get_current_users(self):
         self.user_repository.create_user(self.user_iida)
         service = Service(self.user_repository, "info")
         service.login(self.user_iida.username, self.user_iida.password)
 
         service.get_all_users()
+
+        self.assertEqual("iida", self.user_iida.username)
+
+    def test_get_current_user(self):
+        self.user_repository.create_user(self.user_iida)
+        service = Service(self.user_repository, "info")
+        service.login(self.user_iida.username, self.user_iida.password)
+
+        service.get_current_user()
 
         self.assertEqual("iida", self.user_iida.username)

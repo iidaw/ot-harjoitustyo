@@ -5,7 +5,13 @@ from ui.password_gen_view import PasswordGeneratorView
 
 
 class StartScreen:
+    """Luokka joka vastaa alkunäkymästä
+    """
+
     def __init__(self, root, show_login_view, show_create_user_view, show_password_gen_view):
+        """Luokan konstruktori
+        """
+
         self.root = root
         #self.login = login
         #self.create_user = create_user
@@ -18,13 +24,18 @@ class StartScreen:
         self.initialize()
 
     def pack(self):
+        """Näyttää näkymän"""
         self.frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa näkymän"""
         if self.frame:
             self.frame.destroy()
 
     def initialize(self):
+        """Vastaa näkymän asettelusta
+        """
+
         self.frame = ttk.Frame(master=self.root)
 
         start_label = ttk.Label(
@@ -38,8 +49,6 @@ class StartScreen:
             master=self.frame, text="Log in", command=self.show_login_view)
         login_button.grid(row=3, column=0, sticky=constants.EW)
 
-
-# create userissa on joku vika
         create_user_button = ttk.Button(
             master=self.frame, text="Create user", command=self.show_create_user_view)
         create_user_button.grid(row=4, column=0, sticky=constants.EW)
@@ -49,4 +58,4 @@ class StartScreen:
         generate_password_button.grid(
             row=5, column=0, columnspan=2, sticky=constants.EW)
 
-        self.frame.grid_columnconfigure(0, weight=1, minsize=300)
+        self.frame.grid_columnconfigure(0, weight=1, minsize=500)

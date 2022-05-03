@@ -1,8 +1,8 @@
-from init_database import init_database
+from init_database import initialize_database
 
 
 def build():
-    init_database()
+    initialize_database()
 
 
 if __name__ == '__main__':

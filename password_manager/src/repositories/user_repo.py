@@ -9,10 +9,26 @@ def user_by_row(row):
 
 
 class UserRepo:
+    """Luokka, joka vastaa käyttäjiin liittyvistä tietokantaoperaatioista"""
+
     def __init__(self, connection=get_database_connection()):
+        """Luokan konstuktori
+
+        Args:
+            connection: Connection-olio tietokantaa varten
+        """
         self.connection = connection
 
     def create_user(self, user: User):
+        """Tallentaa käyttäjän tietokantaan
+
+        Args:
+            user: Tallennetaan User-oliona
+
+        Returns:
+            Tallennettu käyttäjä User-oliona
+        """
+
         # print(":)") testausta varten
         cursor = self.connection.cursor()
 
@@ -23,6 +39,8 @@ class UserRepo:
         return user
 
     def find_all_users(self):
+        """Palauttaa kaikki käyttäjät"""
+
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Users")
         rows = cursor.fetchall()
@@ -30,6 +48,14 @@ class UserRepo:
         return list(map(user_by_row, rows))
 
     def find_by_username(self, username):
+        """Palauttaa käyttäjän käyttäjätunnuksen mukaan
+
+        Args:
+            username: Käyttäjätunnus, jonka mukaan käyttäjä palautetaan
+
+        Returns: Palauttaa User-olion käyttäjästä, jos käyttäjä on tietokannassa
+        """
+
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM Users WHERE username = ?", [username])
 
@@ -38,9 +64,12 @@ class UserRepo:
         return user_by_row(row)
 
     def delete_users(self):
+        """Poistaa käyttäjät
+        """
+
         cursor = self.connection.cursor()
         cursor.execute("DELETE FROM Users")
         self.connection.commit()
 
 
-#user_repository = UserRepo(get_database_connection())
+user_repository = UserRepo(get_database_connection())

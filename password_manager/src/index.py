@@ -13,7 +13,7 @@ def main():
     info_repo = InfoRepo()
     service = Service(user_repo, info_repo)
 
-    ui_view = UI(window, user_repo, service)
+    ui_view = UI(window, user_repo, service, info_repo)
     ui_view.start()
 
     window.mainloop()

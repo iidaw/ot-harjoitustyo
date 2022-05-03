@@ -1,44 +1,64 @@
 from database_connection import get_database_connection, get_database_connection_test
 
 
-def drop_tables_users(connection):
-    # poistaa tietokantataulut
-    cursor = connection.cursor()
+def drop_tables(connection):
+    """Poistaa tietokantataulut.
+    Args:
+        connection (Connection): tietokantayhteyden Connection-olio.
+    """
 
-    cursor.execute("DROP TABLE IF EXISTS Users;")
+    cursor = connection.cursor()
+    cursor.execute('''
+        drop table if exists Users;
+    ''')
+
+    cursor.execute('''
+        drop table if exists Passwords;
+    ''')
+
     connection.commit()
 
 
-def create_tables_users(connection):
-    # luo tietokantataulut
+def create_tables(connection):
+    """Luo tietokantataulut.
+    Args:
+        connection (Connection): tietokantayhtdyden Connection-olio.
+    """
+
     cursor = connection.cursor()
-    cursor.execute(
-        "CREATE TABLE Users (username TEXT PRIMARY KEY, password TEXT);")
+    cursor.execute('''
+        create table Users (
+            username text primary key,
+            password text
+        );
+    ''')
+
+    cursor.execute('''
+        create table Passwords (
+            site text primary key,
+            username text,
+            password text,
+            user integer references users
+        );
+    ''')
+
     connection.commit()
 
 
-def create_table_info(connection):
-    cursor = connection.cursor()
-    cursor.execute(
-        "CREATE TABLE Passwords (id PRIMARY KEY, site TEXT, username TEXT, password TEXT);")
-    connection.commit()
+def initialize_database():
+    """Alustaa tietokantataulut.
+    """
 
-    # tähän pitäis kai saada joku mikä yhdistäis tiedot tiettyyn kirjautuneeseen käyttäjään
+    connection = get_database_connection()
+    drop_tables(connection)
+    create_tables(connection)
 
 
-# testausta varten
 def init_database_test():
     connection_test = get_database_connection_test()
-    drop_tables_users(connection_test)
-    create_tables_users(connection_test)
+    drop_tables(connection_test)
+    create_tables(connection_test)
 
 
-# oikea
-def init_database():
-    connection = get_database_connection()
-    drop_tables_users(connection)
-    create_tables_users(connection)
-
-
-if __name__ == '__main__':
-    init_database()
+if __name__ == "__main__":
+    initialize_database()
