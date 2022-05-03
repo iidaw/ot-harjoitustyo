@@ -14,6 +14,7 @@ Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksist
 
 [Käyttöohje](https://github.com/iidaw/ot-harjoitustyo/blob/master/password_manager/dokumentaatio/kayttohje.md)
 
+
 ## Release
 
 [Release viikko 6](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko6)
