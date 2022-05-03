@@ -3,7 +3,7 @@ class Info:
 
     def __init__(self, site, username, password, user=None):
         """Luokan konstruktori
-        
+
             Args:
                 site: merkkijono, kuvaa tallennetun sivuston/ ohjelman nimeä
                 username: merkkijono, kuvaa sivustolle käytettyä käyttäjätunnusta
