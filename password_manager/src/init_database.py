@@ -27,9 +27,9 @@ def create_tables(connection):
 
     cursor = connection.cursor()
     cursor.execute('''
-        create table Users (
-            username text primary key,
-            password text
+        CREATE TABLE Users (
+            username TEXT PRIMARY KEY,
+            password TEXT
         );
     ''')
 
