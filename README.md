@@ -16,7 +16,7 @@ Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksist
 
 ## Release
 
-[Release](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko5)
+[Release viikko 6](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko6)
 
 
 ## Asennus
