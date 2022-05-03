@@ -1,4 +1,6 @@
-# Ohelmistotekniikka, harjoitustyö
+# Password manager
+
+Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksista sovelluksen avulla. Sovelluksella on mahdollista luoda satunnaisia salasanoja käyttäjän määritysten mukaisesti.
 
 
 ## Dokumentaatio
