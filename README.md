@@ -20,9 +20,9 @@ Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksist
 [Release viikko 6](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko6)
 
 
-## Asennus
-1. Suorita komento: _poetry run invoke build_
-2. Asenna riippuvuudet komennolla: _poetry install_
+## Asennus 
+1. Asenna riippuvuudet komennolla: _poetry install_
+2. Suorita komento: _poetry run invoke build_
 3. Ohjelman käynnistys: _poetry run invoke start_
 
 ## Komentorivitoiminnot
