@@ -1,7 +1,7 @@
 class Info:
     """Luokka kuvaa yksittäistä käyttäjä/ salasanatietoa"""
 
-    def __init__(self, site, username, password, user=None):
+    def __init__(self, site, username, password, user):
         """Luokan konstruktori
 
             Args:
