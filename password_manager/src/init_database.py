@@ -35,7 +35,7 @@ def create_tables(connection):
 
     cursor.execute('''
         CREATE TABLE Passwords (
-            site TEXT PRIMARY KEY,
+            site TEXT,
             username TEXT,
             password TEXT,
             user INTEGER REFERENCES Users
