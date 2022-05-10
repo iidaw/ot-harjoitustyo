@@ -38,7 +38,8 @@ def create_tables(connection):
             site TEXT,
             username TEXT,
             password TEXT,
-            user INTEGER REFERENCES Users
+            user TEXT,
+            FOREIGN KEY(user) REFERENCES Users(username)
         );
     ''')
 

@@ -1,11 +1,9 @@
 from entities.save_info import Info
 from database_connection import get_database_connection
 from entities.user import User
+from service.service import service
 
 # kesken
-
-# MITEN SAISIN LISÄTTYÄ SEN HETKISEN KÄYTTÄJÄN SALASANATEITOIHIN "USER" KOHTAAN?
-# TÄLLÄ HETKELLÄ LISÄÄ SIIHEN "NONE"
 
 
 def info_by_row(row):
@@ -18,16 +16,14 @@ class InfoRepo:
 
     def __init__(self, connection=get_database_connection()):
         self.connection = connection
-        self.pw_list = []
 
     def create_password_info(self, info: Info):
         cursor = self.connection.cursor()
         cursor.execute("INSERT INTO Passwords (site, username, password, user) VALUES (?,?,?,?)", [
-                       info.site, info.username, info.password, info.user])
+                       info.site, info.username, info.password, info.user.username])
 
         self.connection.commit()
 
-        # tähän joku korjaus, että saa ton komennon toimimaan!!
 
         return info
 
@@ -37,20 +33,37 @@ class InfoRepo:
         Returns: Palauttaa listan salasanoja ja niihin liittyviä tietoja
         """
 
+        pw_list = []
+
         cursor = self.connection.cursor()
-        cursor.execute("SELECT * FROM Passwords")
+        passwords = cursor.execute("SELECT * FROM Passwords")
 
-        passwords = cursor.fetchall()
+        rows = passwords.fetchall()
 
-        return list(map(info_by_row, passwords))
+        for row in rows:
+            pw_list.append(info_by_row(row))
 
-    def find_passwords_by_user(self, user: User):
+        #print(rows)
+
+        #return list(map(info_by_row, passwords))
+        return pw_list
+
+
+    def find_passwords_by_user(self, user):
+        pw_list = []
+
         cursor = self.connection.cursor()
-        cursor.execute(
-            "SELECT * FROM Passwords WEHRE (user) = ?", (user.username))
-        passwords = cursor.fetchall()
+        passwords = cursor.execute(
+            "SELECT * FROM Passwords WHERE user = ?", [user])
+        rows = passwords.fetchall()
 
-        return list(map(info_by_row, passwords))
+        for row in rows:
+            pw_list.append(info_by_row(row))
+
+        #return list(map(info_by_row, passwords))
+
+
+        return pw_list
 
     def find_by_site(self, site):
         cursor = self.connection.cursor()

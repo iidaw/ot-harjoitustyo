@@ -11,7 +11,8 @@ def main():
 
     user_repo = UserRepo()
     info_repo = InfoRepo()
-    service = Service(user_repo, info_repo)
+    service = Service(user_repo)
+    #, info_repo
 
     ui_view = UI(window, user_repo, service, info_repo)
     ui_view.start()

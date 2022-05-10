@@ -3,7 +3,7 @@
 from entities.user import User
 
 from repositories.user_repo import (UserRepo as default_user_repo)
-from repositories.info_repo import (InfoRepo as default_info_repo)
+#from repositories.info_repo import (InfoRepo as default_info_repo)
 
 
 class InvalidCredentialsError(Exception):
@@ -24,7 +24,7 @@ class Service:
     """Luokka, joka vastaa sovelluslogiikasta
     """
 
-    def __init__(self, user_repo=default_user_repo, info_repo=default_info_repo):
+    def __init__(self, user_repo=default_user_repo):
         """Luokan konstruktori
 
         Args:
@@ -35,10 +35,9 @@ class Service:
 
         self._user = None
         self._user_repo = user_repo
-        self.info_repo = info_repo
+        #self.info_repo = info_repo
+        #, info_repo=default_info_repo
 
-    # def add_information(self):
-      #  information = Info(site, username, password)
 
     def login(self, username, password):
         """Kirjaa käyttäjän sisään
@@ -67,7 +66,6 @@ class Service:
 
         return self._user
 
-        # miten tän saa toimimaan niin, että ottaa "päällä olevan" käyttäjän
 
     def get_all_users(self):
         """Palauttaa kaikki käyttäjät
@@ -96,15 +94,15 @@ class Service:
 
         # pärjäiskö ilman tätä ^^ ei oo kai käytössä just missään
 
-    def find_passwords_by_user(self, user):
-        passwords = self.info_repo.find_passwords_by_user(user)
+    #def find_passwords_by_user(self, user):
+     #   passwords = self.info_repo.find_passwords_by_user(user)
 
-        return passwords
+      #  return passwords
 
-    def add_password_info(self, info):
-        new_password = self.info_repo.create_password_info(info)
+    #def add_password_info(self, info):
+     #   new_password = self.info_repo.create_password_info(info)
 
-        return new_password
+      #  return new_password
 
 
 service = Service()

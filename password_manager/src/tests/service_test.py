@@ -36,6 +36,8 @@ class TestService(unittest.TestCase):
         service = Service(self.user_repository, "info")
         service.login(self.user_iida.username, self.user_iida.password)
 
-        service.get_current_user()
+        current_user = service.get_current_user()
 
-        self.assertEqual("iida", self.user_iida.username)
+        self.assertEqual(current_user, self.user_iida.username)
+
+        # tää testi ei oikeesti toimi

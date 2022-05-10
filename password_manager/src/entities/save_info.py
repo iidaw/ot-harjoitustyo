@@ -16,10 +16,3 @@ class Info:
         self.password = password
         self.user = user
 
-        print(self.user)
-
-    def set_user(self, user):
-        self.user = user
-
-
-# MITEN TÄNNE SAA "USER" KOHTAAN SE  HETKISEN KÄYTTÄJÄN EIKÄ "NONE"
