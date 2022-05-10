@@ -16,7 +16,7 @@ class TestService(unittest.TestCase):
 
     def test_login(self):
         self.user_repository.create_user(self.user_iida)
-        service = Service(self.user_repository, "info")
+        service = Service(self.user_repository)
         service.login(self.user_iida.username, self.user_iida.password)
 
         #all_users = self.user_repository.find_all_users()
@@ -24,7 +24,7 @@ class TestService(unittest.TestCase):
 
     def test_get_current_users(self):
         self.user_repository.create_user(self.user_iida)
-        service = Service(self.user_repository, "info")
+        service = Service(self.user_repository)
         service.login(self.user_iida.username, self.user_iida.password)
 
         service.get_all_users()
@@ -33,10 +33,10 @@ class TestService(unittest.TestCase):
 
     def test_get_current_user(self):
         self.user_repository.create_user(self.user_iida)
-        service = Service(self.user_repository, "info")
+        service = Service(self.user_repository)
         service.login(self.user_iida.username, self.user_iida.password)
 
-        current_user = service.get_current_user()
+        current_user = service.get_current_user().username
 
         self.assertEqual(current_user, self.user_iida.username)
 

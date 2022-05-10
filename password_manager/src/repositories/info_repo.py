@@ -20,7 +20,7 @@ class InfoRepo:
     def create_password_info(self, info: Info):
         cursor = self.connection.cursor()
         cursor.execute("INSERT INTO Passwords (site, username, password, user) VALUES (?,?,?,?)", [
-                       info.site, info.username, info.password, info.user.username])
+                       info.site, info.username, info.password, info.user])
 
         self.connection.commit()
 
