@@ -1,5 +1,5 @@
 from tkinter import ttk, constants, messagebox
-from service.service import service, UsernameExistsError
+#from service.service import service, UsernameExistsError
 from repositories.user_repo import UserRepo
 from entities.user import User
 
@@ -31,6 +31,7 @@ class CreateUserView:
         """Tuhoaa näkymän"""
         self.frame.destroy()
 
+
     def create_user_handle(self):
         """Vastaa käyttäjän luomisesta, varsinaisesta toiminnaliisuudesta vastaa luokka UserRepo
         """
@@ -38,16 +39,14 @@ class CreateUserView:
         username = self.username_entry.get()
         password = self.password_entry.get()
 
-        try:
+        if len(username) >= 1 and len(password) >= 1:
             self.user_repo.create_user(User(username, password))
             self.handle_create_user()
-            messagebox.showinfo("user created", f"User {username} created!")
+            messagebox.showinfo("", f"User {username} created")
 
-        # EI TOIMI NYT OIKEIN, HERJAA VAIN (TERMINAALISSA) ETTÄ EI VOI OLLA SAMA ARVO (käyttäjätunns)
-        # sqlite3.IntegrityError: UNIQUE constraint failed: Users.username
-        except UsernameExistsError:
-            messagebox.showerror("username already exists",
-                                 f"User {username} already exists")
+        else:
+            messagebox.showinfo("", "Username and Password required")
+
 
     def initialize(self):
         """Vastaa käyttäjän luomisnäkymän asettelusta
@@ -55,16 +54,16 @@ class CreateUserView:
 
         self.frame = ttk.Frame(master=self.root)
 
-        label = ttk.Label(master=self.frame, text="Create user")
+        label = ttk.Label(master=self.frame, text="Create user", font="Arial 20")
         label.grid(row=0, column=0, columnspan=2, sticky=constants.W)
 
-        username_label = ttk.Label(master=self.frame, text="Username:")
+        username_label = ttk.Label(master=self.frame, text="Username:", font="Arial")
         username_label.grid(row=1, column=0, sticky=constants.W)
 
         self.username_entry = ttk.Entry(master=self.frame)
         self.username_entry.grid(row=2, column=0, sticky=constants.EW)
 
-        password_label = ttk.Label(master=self.frame, text="Password")
+        password_label = ttk.Label(master=self.frame, text="Password", font="Arial")
         password_label.grid(row=3, column=0, sticky=constants.W)
 
         self.password_entry = ttk.Entry(master=self.frame, show="*")

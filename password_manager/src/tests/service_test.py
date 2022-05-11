@@ -7,20 +7,6 @@ from service.service import Service
 from service.password_generator import password_generator
 
 
-class TestUserRepo(unittest.TestCase):
-    def setUp(self):
-        init_database_test()
-        self.user_repository = UserRepo(get_database_connection_test())
-        self.user_repository.delete_users()
-        self.user_iida = User("iida", "abc123")
-        self.user_anna = User("anna", "def456")
-
-    def test_create(self):
-        self.user_repository.create_user(self.user_iida)
-        all_users = self.user_repository.find_all_users()
-        self.assertEqual(all_users[0].username, self.user_iida.username)
-
-
 class TestService(unittest.TestCase):
     def setUp(self):
         init_database_test()

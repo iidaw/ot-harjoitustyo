@@ -1,6 +1,7 @@
 from entities.save_password_info import PasswordInfo
 from database_connection import get_database_connection
 
+
 def info_by_row(row):
     return PasswordInfo(row["site"], row["username"], row["password"], row["user"] if row else None)
 

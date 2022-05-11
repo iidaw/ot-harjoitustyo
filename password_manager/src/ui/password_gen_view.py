@@ -1,6 +1,4 @@
 from tkinter import END, ttk, constants
-#import string
-#import random
 from service.password_generator import password_generator
 
 
@@ -8,7 +6,6 @@ class PasswordGeneratorView:
     def __init__(self, root, show_add_password_view):
         self.root = root
         self.frame = None
-        #self.show_start_view = show_start_view
         self.password_entry = None
         self.length_entry = None
         self.final_password = str
@@ -26,7 +23,7 @@ class PasswordGeneratorView:
 
     def password_gen(self):
         length_label = ttk.Label(
-            master=self.frame, text="Enter length (number):")
+            master=self.frame, text="Enter length (number):", font="Arial")
         length_label.grid(row=0, column=0, columnspan=2, sticky=constants.EW)
 
         self.length_entry = ttk.Entry(master=self.frame)
@@ -34,7 +31,7 @@ class PasswordGeneratorView:
             row=1, column=0, sticky=constants.EW)
 
         generated_pw_label = ttk.Label(
-            master=self.frame, text="Generated password:")
+            master=self.frame, text="Generated password:", font="Arial")
         generated_pw_label.grid(row=2, column=0, sticky=constants.W)
 
         self.password_entry = ttk.Entry(master=self.frame, text="")

@@ -1,7 +1,4 @@
 from tkinter import ttk, constants
-from ui.create_user_view import CreateUserView
-from ui.login_view import LoginView
-from ui.password_gen_view import PasswordGeneratorView
 
 
 class StartScreen:
@@ -13,12 +10,9 @@ class StartScreen:
         """
 
         self.root = root
-        #self.login = login
-        #self.create_user = create_user
         self.frame = None
         self.show_login_view = show_login_view
         self.show_create_user_view = show_create_user_view
-        #self.show_password_gen_view = show_password_gen_view
         self.show_password_gen_view = show_password_gen_view
 
         self.initialize()
@@ -39,8 +33,8 @@ class StartScreen:
         self.frame = ttk.Frame(master=self.root)
 
         start_label = ttk.Label(
-            master=self.frame, text="Log in or create user")
-        start_label.grid(row=0, column=0, columnspan=2, sticky=constants.W)
+            master=self.frame, text="Log in or create user", font="Arial 20")
+        start_label.grid(row=0, column=0, columnspan=2)
 
         empty_label = ttk.Label(master=self.frame, text="")
         empty_label.grid(row=2, column=0)
@@ -52,11 +46,6 @@ class StartScreen:
         create_user_button = ttk.Button(
             master=self.frame, text="Create user", command=self.show_create_user_view)
         create_user_button.grid(row=4, column=0, sticky=constants.EW)
-
-       # generate_password_button = ttk.Button(
-        #    master=self.frame, text="Generate Password", command=self.show_password_gen_view)
-        # generate_password_button.grid(
-        #   row=5, column=0, columnspan=2, sticky=constants.EW)
 
         empty_label = ttk.Label(master=self.frame)
         empty_label.grid(row=5, column=0)

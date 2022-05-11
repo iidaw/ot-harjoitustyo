@@ -1,14 +1,7 @@
-from tkinter import END, Scrollbar, ttk, constants
-#from tkinter.messagebox import NO
+from tkinter import END, Scrollbar, messagebox, ttk, constants
 from repositories.info_repo import InfoRepo
 from service.service import Service
 from entities.save_password_info import PasswordInfo
-#from ui.password_gen_view import PasswordGeneratorView
-
-
-# lisää ruutu, jossa näkyy kaikki tallennetut salasanat
-# jossain ylhäällä vois näkyä, mikä käyttäjä käyttää ohjelmaa
-# pitäis jotenki yhdistää kirjautuminen ja salasanat niin, että kirjautuu sisään --> näkyy omat salasanat
 
 
 class AddPasswordView:
@@ -54,11 +47,22 @@ class AddPasswordView:
         password = self.password_entry.get()
 
         # print(self.service.get_current_user().username)
+        if len(site) >= 1 and len(username) >= 1 and len(password) >= 1:
+            self.info_repo.add_password_info(
+                PasswordInfo(site, username, password, self.service.get_current_user().username))
+            self.add_info_messagebox()
 
-        self.info_repo.add_password_info(
-            PasswordInfo(site, username, password, self.service.get_current_user().username))
+        else:
+            self.error_messagebox()
 
         self.treeview()
+
+    def error_messagebox(self):
+        messagebox.showinfo("empty", "Site, Username and Password required")
+        
+
+    def add_info_messagebox(self):
+        messagebox.showinfo("", "Password information added")
 
     def treeview(self):
         """Vastaa salasanojen näkymisestä
@@ -87,26 +91,26 @@ class AddPasswordView:
         self.frame = ttk.Frame(master=self.root)
 
         current_user_label = ttk.Label(
-            master=self.frame, text=f"Logged in as {self.service.get_current_user().username}")
+            master=self.frame, text=f"Logged in as {self.service.get_current_user().username}", font="Arial 15")
         current_user_label.grid(
             row=0, column=0, columnspan=2, sticky=constants.W)
 
-        label = ttk.Label(master=self.frame, text="Add information")
+        label = ttk.Label(master=self.frame, text="Add information", font="Arial 20")
         label.grid(row=2, column=0, columnspan=2, sticky=constants.W)
 
-        site_label = ttk.Label(master=self.frame, text="Site/ App: ")
+        site_label = ttk.Label(master=self.frame, text="Site/ App: ", font="Arial")
         site_label.grid(row=3, column=0, sticky=constants.W)
 
         self.site_entry = ttk.Entry(master=self.frame)
         self.site_entry.grid(row=4, column=0, sticky=constants.EW)
 
-        username_label = ttk.Label(master=self.frame, text="Username:")
+        username_label = ttk.Label(master=self.frame, text="Username:", font="Arial")
         username_label.grid(row=5, column=0, sticky=constants.W)
 
         self.username_entry = ttk.Entry(master=self.frame)
         self.username_entry.grid(row=6, column=0, sticky=constants.EW)
 
-        password_label = ttk.Label(master=self.frame, text="Password:")
+        password_label = ttk.Label(master=self.frame, text="Password:", font="Arial")
         password_label.grid(row=7, column=0, sticky=constants.W)
 
         self.password_entry = ttk.Entry(master=self.frame)

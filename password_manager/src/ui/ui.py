@@ -76,5 +76,3 @@ class UI:
             self.root, self.service, self.info_repo, self.show_start_view, self.show_password_gen_view)
 
         self.current_view.pack()
-
-    # jotenki pitää näyttä tallennetut salasanat

@@ -1,8 +1,8 @@
 from tkinter import Tk
 from repositories.info_repo import InfoRepo
-from ui.ui import UI
 from repositories.user_repo import UserRepo
 from service.service import Service
+from ui.ui import UI
 
 
 def main():

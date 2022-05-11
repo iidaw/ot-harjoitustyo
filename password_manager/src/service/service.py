@@ -1,9 +1,5 @@
-#from entities.save_info import Info
 from entities.user import User
-
 from repositories.user_repo import (UserRepo as default_user_repo)
-#from repositories.info_repo import (InfoRepo as default_info_repo)
-
 
 class InvalidCredentialsError(Exception):
     """Luokka, joka tuottaa virheen jos käyttäjänimi ja/tai salasana on virheellinen
@@ -74,20 +70,6 @@ class Service:
 
     def logout(self):
         self._user = None
-
-    def create_user(self, username, password, login=True):
-
-        existis = self._user_repo.find_by_username(username)
-
-        if existis:
-            raise UsernameExistsError(f"Username {username} already exists")
-
-        user = self._user_repo.create_user(User(username, password))
-
-        if login:
-            self._user = user
-
-        return user
 
 
 service = Service()

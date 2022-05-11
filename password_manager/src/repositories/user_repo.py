@@ -1,7 +1,5 @@
-#import sqlite3
 from entities.user import User
 from database_connection import get_database_connection
-#from init_database import init_database
 
 
 def user_by_row(row):
