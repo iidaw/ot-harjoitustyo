@@ -29,7 +29,6 @@ class UserRepo:
             Tallennettu käyttäjä User-oliona
         """
 
-        # print(":)") testausta varten
         cursor = self.connection.cursor()
 
         cursor.execute("INSERT INTO Users (username, password) values (?,?)", [
@@ -49,10 +48,8 @@ class UserRepo:
 
     def find_by_username(self, username):
         """Palauttaa käyttäjän käyttäjätunnuksen mukaan
-
         Args:
             username: Käyttäjätunnus, jonka mukaan käyttäjä palautetaan
-
         Returns: Palauttaa User-olion käyttäjästä, jos käyttäjä on tietokannassa
         """
 
@@ -64,7 +61,7 @@ class UserRepo:
         return user_by_row(row)
 
     def delete_users(self):
-        """Poistaa käyttäjät
+        """Poistaa kaikki käyttäjät
         """
 
         cursor = self.connection.cursor()

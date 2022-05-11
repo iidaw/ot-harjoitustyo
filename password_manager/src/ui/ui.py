@@ -49,7 +49,7 @@ class UI:
         self.hide_current_view()
 
         self.current_view = PasswordGeneratorView(
-            self.root, self.show_start_view)
+            self.root, self.show_add_password_view)
 
         self.current_view.pack()
 
@@ -73,7 +73,7 @@ class UI:
         self.hide_current_view()
 
         self.current_view = AddPasswordView(
-            self.root, self.service, self.info_repo, self.show_start_view)
+            self.root, self.service, self.info_repo, self.show_start_view, self.show_password_gen_view)
 
         self.current_view.pack()
 

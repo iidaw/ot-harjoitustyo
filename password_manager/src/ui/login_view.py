@@ -85,4 +85,7 @@ class LoginView:
             master=self.frame, text="Back", command=self.show_start_view)
         back_button.grid(row=7, column=0, sticky=constants.EW)
 
+        empty_label = ttk.Label(master=self.frame)
+        empty_label.grid(row=8, column=0)
+
         self.frame.grid_columnconfigure(0, weight=1, minsize=500)

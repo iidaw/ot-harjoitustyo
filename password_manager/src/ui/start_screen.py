@@ -53,9 +53,12 @@ class StartScreen:
             master=self.frame, text="Create user", command=self.show_create_user_view)
         create_user_button.grid(row=4, column=0, sticky=constants.EW)
 
-        generate_password_button = ttk.Button(
-            master=self.frame, text="Generate Password", command=self.show_password_gen_view)
-        generate_password_button.grid(
-            row=5, column=0, columnspan=2, sticky=constants.EW)
+       # generate_password_button = ttk.Button(
+        #    master=self.frame, text="Generate Password", command=self.show_password_gen_view)
+        # generate_password_button.grid(
+        #   row=5, column=0, columnspan=2, sticky=constants.EW)
+
+        empty_label = ttk.Label(master=self.frame)
+        empty_label.grid(row=5, column=0)
 
         self.frame.grid_columnconfigure(0, weight=1, minsize=500)

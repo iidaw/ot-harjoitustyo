@@ -1,15 +1,15 @@
 import sqlite3
-from config import DATABASE_FILE_PATH
+from config import database_file_path
 
 
 def get_database_connection():
     """Palauttaa yhteyden tietokantaan
     """
 
-    CONNECTION = sqlite3.connect(DATABASE_FILE_PATH)
-    CONNECTION.row_factory = sqlite3.Row
-    
-    return CONNECTION
+    connection = sqlite3.connect(database_file_path)
+    connection.row_factory = sqlite3.Row
+
+    return connection
 
 
 # testausta varten

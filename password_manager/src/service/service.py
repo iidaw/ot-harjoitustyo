@@ -1,4 +1,3 @@
-
 #from entities.save_info import Info
 from entities.user import User
 
@@ -36,8 +35,7 @@ class Service:
         self._user = None
         self._user_repo = user_repo
         #self.info_repo = info_repo
-        #, info_repo=default_info_repo
-
+        # , info_repo=default_info_repo
 
     def login(self, username, password):
         """Kirjaa käyttäjän sisään
@@ -66,7 +64,6 @@ class Service:
 
         return self._user
 
-
     def get_all_users(self):
         """Palauttaa kaikki käyttäjät
 
@@ -92,24 +89,5 @@ class Service:
 
         return user
 
-        # pärjäiskö ilman tätä ^^ ei oo kai käytössä just missään
-
-    #def find_passwords_by_user(self, user):
-     #   passwords = self.info_repo.find_passwords_by_user(user)
-
-      #  return passwords
-
-    #def add_password_info(self, info):
-     #   new_password = self.info_repo.create_password_info(info)
-
-      #  return new_password
-
 
 service = Service()
-
-
-#password_service = PasswordService()
-#user_service = UserService()
-
-
-# kesken

@@ -2,7 +2,8 @@ from tkinter import END, Scrollbar, ttk, constants
 #from tkinter.messagebox import NO
 from repositories.info_repo import InfoRepo
 from service.service import Service
-from entities.save_info import Info
+from entities.save_password_info import PasswordInfo
+#from ui.password_gen_view import PasswordGeneratorView
 
 
 # lisää ruutu, jossa näkyy kaikki tallennetut salasanat
@@ -14,7 +15,7 @@ class AddPasswordView:
     """Luokka vastaa salasananäkymästä ja sen näkymisestä
     """
 
-    def __init__(self, root, service: Service, info_repo: InfoRepo, show_start_view):
+    def __init__(self, root, service: Service, info_repo: InfoRepo, show_start_view, show_password_gen_view):
         """Luokan konstruktori
 
             Args:
@@ -32,6 +33,7 @@ class AddPasswordView:
         self.username_entry = None
         self.password_entry = None
         self.show_start_view = show_start_view
+        self.show_password_gen_view = show_password_gen_view
 
         self.initialize()
 
@@ -43,7 +45,6 @@ class AddPasswordView:
         """Tuhoaa näkymän"""
         self.frame.destroy()
 
-
     def add_info_handle(self):
         """Mahdollistaa salasanan tallentamisen tietokantaan, itse toiminnosta vastaa InfoRepo luokka
         """
@@ -52,36 +53,32 @@ class AddPasswordView:
         username = self.username_entry.get()
         password = self.password_entry.get()
 
-        #print(self.service.get_current_user().username)
+        # print(self.service.get_current_user().username)
 
-        self.info_repo.create_password_info(
-            Info(site, username, password, self.service.get_current_user().username))
+        self.info_repo.add_password_info(
+            PasswordInfo(site, username, password, self.service.get_current_user().username))
 
         self.treeview()
-        
-
 
     def treeview(self):
         """Vastaa salasanojen näkymisestä
         """
 
-        # lisää scrollbar
-
         tree = ttk.Treeview(self.frame, column=(
             "site", "username", "password"), show="headings", selectmode="browse")
-       
+
         tree.heading("site", text="Site/ App")
         tree.heading("username", text="Username")
         tree.heading("password", text="Password")
 
         tree.grid(row=9, column=0, columnspan=2, sticky=constants.EW)
 
-        passwords = self.info_repo.find_passwords_by_user(self.service.get_current_user().username)
-        
+        passwords = self.info_repo.find_passwords_by_user(
+            self.service.get_current_user().username)
 
         for password in passwords:
-            tree.insert("", END, values=(password.site, password.username, password.password))
-
+            tree.insert("", END, values=(password.site,
+                        password.username, password.password))
 
     def initialize(self):
         """Vastaa näkymän asettelusta
@@ -89,11 +86,13 @@ class AddPasswordView:
 
         self.frame = ttk.Frame(master=self.root)
 
-        current_user_label = ttk.Label(master=self.frame, text=f"Logged in as {self.service.get_current_user().username}")
-        current_user_label.grid(row=0, column=0, columnspan=2, sticky=constants.W)
+        current_user_label = ttk.Label(
+            master=self.frame, text=f"Logged in as {self.service.get_current_user().username}")
+        current_user_label.grid(
+            row=0, column=0, columnspan=2, sticky=constants.W)
 
         label = ttk.Label(master=self.frame, text="Add information")
-        label.grid(row=1, column=0, columnspan=2, sticky=constants.W)
+        label.grid(row=2, column=0, columnspan=2, sticky=constants.W)
 
         site_label = ttk.Label(master=self.frame, text="Site/ App: ")
         site_label.grid(row=3, column=0, sticky=constants.W)
@@ -115,14 +114,21 @@ class AddPasswordView:
 
         self.treeview()
 
+        password_generator_button = ttk.Button(
+            master=self.frame, text="Generate Password", command=self.show_password_gen_view)
+        password_generator_button.grid(
+            row=10, column=0, columnspan=2, sticky=constants.EW)
+
         add_button = ttk.Button(
-            master=self.frame, text="Add infromation", command=self.add_info_handle)  
+            master=self.frame, text="Add infromation", command=self.add_info_handle)
 
-        add_button.grid(row=10, column=0, columnspan=3, sticky=constants.EW)
-
+        add_button.grid(row=11, column=0, columnspan=3, sticky=constants.EW)
 
         logout_button = ttk.Button(
             master=self.frame, text="Log out", command=self.show_start_view)
-        logout_button.grid(row=11, column=0, columnspan=2, sticky=constants.EW)
+        logout_button.grid(row=12, column=0, columnspan=2, sticky=constants.EW)
+
+        empty_label = ttk.Label(master=self.frame)
+        empty_label.grid(row=13, column=0)
 
         self.frame.grid_columnconfigure(0, weight=1, minsize=500)

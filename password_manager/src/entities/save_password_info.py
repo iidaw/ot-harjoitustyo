@@ -1,4 +1,4 @@
-class Info:
+class PasswordInfo:
     """Luokka kuvaa yksittäistä käyttäjä/ salasanatietoa"""
 
     def __init__(self, site, username, password, user):
@@ -15,4 +15,3 @@ class Info:
         self.username = username
         self.password = password
         self.user = user
-
