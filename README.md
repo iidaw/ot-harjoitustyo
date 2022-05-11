@@ -23,7 +23,7 @@ Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksist
 
 
 ## Asennus 
-1. Asenna riippuvuudet komennolla: _poetry install_
+1. Asenna riippuvuudet komennolla (password_manager hakemistossa): _poetry install_
 2. Suorita komento: _poetry run invoke build_
 3. Ohjelman käynnistys: _poetry run invoke start_
 
