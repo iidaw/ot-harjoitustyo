@@ -27,15 +27,15 @@ Ohjelmaa on testattu Python-versiolla 3.8
 
 
 ## Asennus 
-1. Asenna riippuvuudet komennolla (password_manager hakemistossa): _poetry install_
-2. Suorita komento: _poetry run invoke build_
-3. Ohjelman käynnistys: _poetry run invoke start_
+1. Asenna riippuvuudet komennolla (password_manager hakemistossa): **poetry install**
+2. Suorita komento: **poetry run invoke build**
+3. Ohjelman käynnistys: **poetry run invoke start**
 
 ## Komentorivitoiminnot
-Testit komennolla: _poetry run invoke test_
+Testit komennolla: **poetry run invoke test**
 
-Testikattavuus: _poetry run invoke coverage-report_
+Testikattavuus: **poetry run invoke coverage-report**
 
-Koodin automaattinen formatointi: _poetry run invoke format_
+Koodin automaattinen formatointi: **poetry run invoke format**
 
-Pylint automaattinen laatutarkistus: _poetry run invoke lint_
+Pylint automaattinen laatutarkistus: **poetry run invoke lint**
