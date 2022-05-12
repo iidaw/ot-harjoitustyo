@@ -23,7 +23,7 @@ Ohjelmaa on testattu Python-versiolla 3.8
 
 ## Release
 
-[Password Manager](https://github.com/iidaw/python-password-manager/releases/tag/password_manager)
+[Loppupalautus](https://github.com/iidaw/python-password-manager/releases/tag/Loppupalautus)
 
 
 ## Asennus 
