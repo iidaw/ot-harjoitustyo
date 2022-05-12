@@ -9,9 +9,10 @@ Sovelluslogiikasta vastaavat Service luokka ja password_generator-metodi testata
 Repositorio-luokat (UserRepo ja InfoRepo) testataan automaattisilla testeillä.
 
 ### Testauskattavuus
-Ilman käyttöliittymän testausta testauksen haarautumiskattavuus on 89%
+Ilman käyttöliittymän testausta testauksen haarautumiskattavuus on 88%
 
-<img width="899" alt="Näyttökuva 2022-5-11 kello 12 35 02" src="https://user-images.githubusercontent.com/90407612/167820420-89bdb0eb-0759-48fe-974c-ea7a943e4006.png">
+<img width="845" alt="Näyttökuva 2022-5-12 kello 14 43 09" src="https://user-images.githubusercontent.com/90407612/168067310-008bee4f-a9b4-4022-b5ca-e14d81ff9141.png">
+
 
 
 ## Käyttöjärjestelmän testaus
