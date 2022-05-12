@@ -7,7 +7,7 @@ class User:
             Args:
                 username: merkkijono, käyttäjän tunnus
                 password: merkkijono, käyttäjän salasana
-                """
+        """
 
         self.username = username
         self.password = password

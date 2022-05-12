@@ -46,9 +46,11 @@ class UserRepo:
 
     def find_by_username(self, username):
         """Palauttaa käyttäjän käyttäjätunnuksen mukaan
-        Args:
-            username: Käyttäjätunnus, jonka mukaan käyttäjä palautetaan
-        Returns: Palauttaa User-olion käyttäjästä, jos käyttäjä on tietokannassa
+
+            Args:
+                username: Käyttäjätunnus, jonka mukaan käyttäjä palautetaan
+
+            Returns: Palauttaa User-olion käyttäjästä, jos käyttäjä on tietokannassa
         """
 
         cursor = self.connection.cursor()
@@ -59,8 +61,7 @@ class UserRepo:
         return user_by_row(row)
 
     def delete_users(self):
-        """Poistaa kaikki käyttäjät
-        """
+        """Poistaa kaikki käyttäjät tietokannasta"""
 
         cursor = self.connection.cursor()
         cursor.execute("DELETE FROM Users")

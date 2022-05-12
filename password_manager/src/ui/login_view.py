@@ -4,12 +4,10 @@ from service.service import Service, InvalidCredentialsError
 
 
 class LoginView:
-    """Luokka vastaa kirjautumisnäkymästä
-    """
+    """Luokka vastaa kirjautumisnäkymästä"""
 
     def __init__(self, root, handle_create_user, handle_login, show_start_view, service: Service):
-        """Luokan konstruktori
-        """
+        """Luokan konstruktori"""
 
         self.root = root
         self.handle_create_user = handle_create_user
@@ -47,10 +45,8 @@ class LoginView:
             messagebox.showerror("Invalid credentials",
                                  "Invalid username or password")
 
-        
     def initialize(self):
-        """Vastaa kirjautumisnäkymän asettelusta
-        """
+        """Vastaa kirjautumisnäkymän asettelusta"""
 
         self.frame = ttk.Frame(master=self.root)
 
@@ -58,7 +54,8 @@ class LoginView:
                           text="Username and password to login", font="Arial 20")
         label.grid(row=0, column=0, columnspan=2, sticky=constants.W)
 
-        username_label = ttk.Label(master=self.frame, text="Username:", font="Arial")
+        username_label = ttk.Label(
+            master=self.frame, text="Username:", font="Arial")
         username_label.grid(row=2, column=0, sticky=constants.W)
 
         self.username_entry = ttk.Entry(
@@ -66,7 +63,8 @@ class LoginView:
         self.username_entry.grid(
             row=3, column=0, columnspan=2, sticky=constants.EW)
 
-        password_label = ttk.Label(master=self.frame, text="Password:", font="Arial")
+        password_label = ttk.Label(
+            master=self.frame, text="Password:", font="Arial")
         password_label.grid(row=4, column=0, sticky=constants.W)
 
         self.password_entry = ttk.Entry(

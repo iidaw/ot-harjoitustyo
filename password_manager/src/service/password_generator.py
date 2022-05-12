@@ -3,7 +3,14 @@ import random
 
 
 def password_generator(length):
-    """Luo satunnaisen salasanan käyttäjän valitsemalla pituudella"""
+    """Luo satunnaisen salasanan käyttäjän valitsemalla pituudella
+
+        Args:
+            length: salasanan haluttu pituus
+
+        Returns: Palauttaa valmiin salasanan
+    """
+
     password = []
     all_char = string.ascii_letters + string.digits + string.punctuation
 

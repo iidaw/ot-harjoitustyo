@@ -1,5 +1,4 @@
 from tkinter import ttk, constants, messagebox
-#from service.service import service, UsernameExistsError
 from repositories.user_repo import UserRepo
 from entities.user import User
 
@@ -31,7 +30,6 @@ class CreateUserView:
         """Tuhoaa näkymän"""
         self.frame.destroy()
 
-
     def create_user_handle(self):
         """Vastaa käyttäjän luomisesta, varsinaisesta toiminnaliisuudesta vastaa luokka UserRepo
         """
@@ -47,23 +45,24 @@ class CreateUserView:
         else:
             messagebox.showinfo("", "Username and Password required")
 
-
     def initialize(self):
-        """Vastaa käyttäjän luomisnäkymän asettelusta
-        """
+        """Vastaa käyttäjän luomisnäkymän asettelusta"""
 
         self.frame = ttk.Frame(master=self.root)
 
-        label = ttk.Label(master=self.frame, text="Create user", font="Arial 20")
+        label = ttk.Label(master=self.frame,
+                          text="Create user", font="Arial 20")
         label.grid(row=0, column=0, columnspan=2, sticky=constants.W)
 
-        username_label = ttk.Label(master=self.frame, text="Username:", font="Arial")
+        username_label = ttk.Label(
+            master=self.frame, text="Username:", font="Arial")
         username_label.grid(row=1, column=0, sticky=constants.W)
 
         self.username_entry = ttk.Entry(master=self.frame)
         self.username_entry.grid(row=2, column=0, sticky=constants.EW)
 
-        password_label = ttk.Label(master=self.frame, text="Password", font="Arial")
+        password_label = ttk.Label(
+            master=self.frame, text="Password", font="Arial")
         password_label.grid(row=3, column=0, sticky=constants.W)
 
         self.password_entry = ttk.Entry(master=self.frame, show="*")

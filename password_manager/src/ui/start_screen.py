@@ -2,12 +2,10 @@ from tkinter import ttk, constants
 
 
 class StartScreen:
-    """Luokka joka vastaa alkunäkymästä
-    """
+    """Luokka joka vastaa alkunäkymästä"""
 
     def __init__(self, root, show_login_view, show_create_user_view, show_password_gen_view):
-        """Luokan konstruktori
-        """
+        """Luokan konstruktori"""
 
         self.root = root
         self.frame = None
@@ -27,8 +25,7 @@ class StartScreen:
             self.frame.destroy()
 
     def initialize(self):
-        """Vastaa näkymän asettelusta
-        """
+        """Vastaa näkymän asettelusta"""
 
         self.frame = ttk.Frame(master=self.root)
 

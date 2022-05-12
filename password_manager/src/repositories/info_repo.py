@@ -11,9 +11,23 @@ class InfoRepo:
     """
 
     def __init__(self, connection=get_database_connection()):
+        """Luokan konstruktori
+
+            Args:
+                connection: Connection-olio tietokantaa varten
+        """
+
         self.connection = connection
 
     def add_password_info(self, info: PasswordInfo):
+        """Lisää tallennettavan salasanan ja siihen liittyvät tiedot
+
+            Args:
+                info: taallennettavat salasanatiedot PassworInfo-oliona
+
+            Returns: Palauttaa tallennetun salasanan ja siihen liittyvät tiedot
+        """
+
         cursor = self.connection.cursor()
         cursor.execute("INSERT INTO Passwords (site, username, password, user) VALUES (?,?,?,?)", [
                        info.site, info.username, info.password, info.user])
@@ -30,6 +44,7 @@ class InfoRepo:
 
             Returns: Palauttaa listan käyttäjän tallentamista salasanoista
         """
+
         pw_list = []
 
         cursor = self.connection.cursor()
@@ -43,7 +58,7 @@ class InfoRepo:
         return pw_list
 
     def delete_password_info(self):
-        """Poistaa kaikki salasanat
+        """Poistaa kaikki salasanat tietokannasta
         """
 
         cursor = self.connection.cursor()

@@ -51,8 +51,7 @@ class PasswordGeneratorView:
         empty_label.grid(row=6, column=0)
 
     def init_frame(self):
-        """Vastaa näkymän asettelusta
-        """
+        """Vastaa näkymän asettelusta"""
 
         self.frame = ttk.Frame(master=self.root)
 

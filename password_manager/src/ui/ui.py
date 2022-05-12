@@ -6,8 +6,7 @@ from ui.add_passwords_view import AddPasswordView
 
 
 class UI:
-    """Luokka vastaa käyttöliittymän toiminnasta ja siitä, miten näkymät vaihtuvat
-    """
+    """Luokka vastaa käyttöliittymän toiminnasta ja siitä, miten näkymät vaihtuvat"""
 
     def __init__(self, root, user_repo, service, info_repo):
         self.root = root
