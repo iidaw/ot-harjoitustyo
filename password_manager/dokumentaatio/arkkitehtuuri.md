@@ -18,6 +18,10 @@ Kirjautumisnäkymässä kenttiin kirjoitetaan käyttäjätunnus ja salasana, jon
 
 Tapahtumankäsittelijä kutsuu metodia create_user parametrinaan luotavan käyttäjän tunnus ja salasana. Jos käyttäjää ei ole vielä olemassa luodaan sellainen annetuilla tiedoilla luokkien UserRepo ja User avulla. UserRpo luo uuden käyttäjän tallentaen ne User-olion muodossa.
 
+### Satunnaisen salasanan luominen
+
+Käyttäjä syöttää salasanan halutun pituuden ja salasana luodaan password_generator-metodin avulla, metodi saa attribuutiksi PasswordGeneratorView:n length.entry:lle annetun pituuden.
+
 
 ## Tietojen pysyväistallennus
 Luokat InfoRepo ja UserRepo vastaavat tietojen tallennuksesta. Tiedot tallentuvat SQLite-tietokantaan.
