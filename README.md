@@ -1,4 +1,4 @@
-# Password manager
+# Password Manager
 
 Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksista sovelluksen avulla. Sovelluksella on mahdollista luoda satunnaisia salasanoja käyttäjän määritysten mukaisesti.
 
@@ -23,7 +23,7 @@ Ohjelmaa on testattu Python-versiolla 3.8
 
 ## Release
 
-[Loppupalautus](https://github.com/iidaw/ot-harjoitustyo/releases/tag/loppupalautus)
+[Password Manager](https://github.com/iidaw/python-password-manager/releases/tag/password_manager)
 
 
 ## Asennus 
