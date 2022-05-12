@@ -25,3 +25,5 @@ Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 * Salasanatietojen poisto
 * Salasanatietojen muokkaus
 * Salasanojen "salaus"/ tallentaminen hash-arvoina
+* Luodun satunnaisen salasanan voisi kopioda leikepöydälle jollakin painikkeella
+* Tallennettuja salasanoja/ käyttäjätunnuksia voisi kopioida jotenkin leikepöydälle
