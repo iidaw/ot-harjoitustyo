@@ -28,7 +28,7 @@ Ohjelmaa on testattu Python-versiolla 3.8
 
 ## Asennus 
 1. Asenna riippuvuudet komennolla (password_manager hakemistossa): **poetry install**
-2. Suorita komento: **poetry run invoke build**
+2. Suorita komento (alustaa tietokannat): **poetry run invoke build**
 3. Ohjelman käynnistys: **poetry run invoke start**
 
 ## Komentorivitoiminnot
