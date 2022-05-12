@@ -52,7 +52,7 @@ Klikkaamalla "Generate Password" painiketta, pääsee generoimaan haluamansa pit
 
 
 ### Huomioitavaa käytössä
-Tässä mainittuna ohjelmaan jääneet ongelmat.
+Tässä mainittuna ohjelmaan jääneet puutteet.
 
 Ohjelma ei tällä hetkellä ilmoita jos on luomassa uutta käyttäjää ja kyseinen käyttäjätunnus onkin jo olemassa. Ohjelma antaa ilmoituksen, kun käyttäjätunnus on luotu onnistuneesti. Jos ei tule ilmoitusta, käyttäjätunnus on mahdollisesti jo olemassa, siinä tapauksessa yritä luoda käyttäjä toisella tunnuksella.
 
