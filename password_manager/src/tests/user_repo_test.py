@@ -11,7 +11,6 @@ class TestUserRepo(unittest.TestCase):
     def setUp(self):
         init_database_test()
         self.user_repository = UserRepo(get_database_connection_test())
-        self.user_repository.delete_users()
         self.user_iida = User("iida", "abc123")
         self.user_anna = User("anna", "def456")
 
@@ -25,7 +24,6 @@ class TestInfoRepo(unittest.TestCase):
     def setUp(self):
         init_database_test()
         self.info_repo = InfoRepo(get_database_connection_test())
-        self.info_repo.delete_password_info()
         self.password_iida1 = PasswordInfo("moodle", "iidab", "abc123", "iida")
         self.password_iida2 = PasswordInfo("labtool", "iidab", "abc", "iida")
         self.password_anna = PasswordInfo("labtool", "annae", "def123", "anna")
