@@ -23,7 +23,7 @@ Ohjelmaa on testattu Python-versiolla 3.8
 
 ## Release
 
-[Release viikko 6](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko6)
+[Loppupalautus](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko6)
 
 
 ## Asennus 
