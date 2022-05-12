@@ -17,6 +17,10 @@ Käyttäjän on mahdollista pitää kirjaa salasanoista ja käyttäjätunnuksist
 [Testausdokumentti](https://github.com/iidaw/ot-harjoitustyo/blob/master/password_manager/dokumentaatio/testaus.md)
 
 
+## Python versiosta
+Ohjelmaa on testattu Python-versiolla 3.8
+
+
 ## Release
 
 [Release viikko 6](https://github.com/iidaw/ot-harjoitustyo/releases/tag/viikko6)
