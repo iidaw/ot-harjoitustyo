@@ -1,5 +1,5 @@
 # Käyttöohje
-Lataa projektin viimeisimmän releasen lähdekoodi.
+Lataa projektin viimeinen [release](https://github.com/iidaw/ot-harjoitustyo/releases/tag/loppupalautus).
 
 ## Ohjelman käynnistäminen
 Asenna riippuvuudet ennen käynnistämistä komennolla (password_manager hakemistossa):
