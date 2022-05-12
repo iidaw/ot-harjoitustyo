@@ -11,7 +11,6 @@ class TestService(unittest.TestCase):
     def setUp(self):
         init_database_test()
         self.user_repository = UserRepo(get_database_connection_test())
-        self.user_repository.delete_users()
         self.user_iida = User("iida", "abc123")
 
     def test_login(self):
