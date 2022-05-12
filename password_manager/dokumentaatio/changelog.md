@@ -22,3 +22,10 @@
 * Käyttäjä voi kirjautua ulos
 * Käyttöliittymään on lisätty salasanatietojen näkymä, jossa treeview, jossa pitäis näkyä salasanatiedot, mutta ei tällä hetkellä näy (en saa yhdistettyä tietokantaa näkymään)
 * Lisätty muutama virheilmoitus sekä ilmoitus uuden käyttäjän luomisen onnistumisesta
+
+
+## Viikko 7
+* Käyttöliittymän salasanatietojen näkymään saatu lisättyä salasanatiedot tietokannasta
+* Käyttäjä voi tallentaa salasanatietoja omalla käyttäjällä niin, että ne tallentuvat oikeian käyttäjän alle
+* Generate Password näkymä siirretty niin, että näkyy kirjautuneelle käyttäjälle
+* Loppupalautus
