@@ -11,12 +11,17 @@ Useampi käyttäjä voi käyttää sovellusta omilla tunnuksillaan.
 ## Toiminnallisuudet
 
 ### Kirjautuminen
-* Käyttäjä voi luoda oman tunnuksen (käyttäjätunnus + salasana) sovellukseen   (tehty)
-* Käyttäjä voi kirjautua omilla tunnuksillaan sovellukseen   (tehty)
+* Käyttäjä voi luoda oman tunnuksen (käyttäjätunnus + salasana) sovellukseen   **tehty
+* Käyttäjä voi kirjautua omilla tunnuksillaan sovellukseen   **tehty
 
 ### Käyttö
-* Käyttäjä voi tarkastella omia salasanojaan ja käyttäjätunnuksiaan
-* Käyttäjä voi tallentaa salasanatietoja (sivusto/appi, käyttäjätunnus, salasana)   (tehty, toimii osittain)
-* Käyttäjä voi poistaa salasanoja/ käyttäjätunnuksia
-* Käyttäjä voi luoda/ "generoida" satunnaisen salasanan omien määritysten mukaisesti  (tehty)
-* Käyttäjä voi kirjautua ulos järjestelmästä   (tehty)
+* Käyttäjä voi tarkastella omia salasanojaan ja käyttäjätunnuksiaan   **tehty
+* Käyttäjä voi tallentaa salasanatietoja (sivusto/appi, käyttäjätunnus, salasana)   **tehty
+* Käyttäjä voi luoda/ "generoida" satunnaisen salasanan omien määritysten mukaisesti  **tehty
+* Käyttäjä voi kirjautua ulos järjestelmästä   **tehty
+
+
+## Jatkokehitysideoita
+* Salasanatietojen poisto
+* Salasanatietojen muokkaus
+* Salasanojen "salaus"/ tallentaminen hash-arvoina
