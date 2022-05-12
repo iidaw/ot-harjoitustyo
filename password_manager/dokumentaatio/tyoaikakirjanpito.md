@@ -13,5 +13,8 @@
 |25.4.    |3h      |käyttäjätunnuksen ja kirjautumisen koodien tekemistä + ui:n korjauksia|
 |26.4.    |2h      |testien tekemistä|
 |2.5.     |5h      |virheilmoituksien lisäämistä + käyttöliittymään lisää toiminnallisuutta|
-3.5.      |8h      |bugien selvittelyä + yritystä saada tietokantataulut yhdistettyä + dokumentaatio|
-|yht.     |37h     | |
+|3.5.     |8h      |bugien selvittelyä + yritystä saada tietokantataulut yhdistettyä + dokumentaatio|
+|9.5.     |5h      |tietokantojen tiedon tallentamisen selvittleyä ja bugien korjausta + dokumentaatiota|
+|10.5.    |3h      |salasanatietojen näkyminen käyttöliittymässä|
+|12.5.    |3h      |koodin läpikäyntiä, turhien osien poistamista|
+|yht.     |48h     | |
