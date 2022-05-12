@@ -3,7 +3,7 @@ Ohjelmaa on testattu automaattisilla testeillä unittestilla sekä manuaalisesti
 
 ## Automaattiset testit
 ### Sovelluslogiikka
-Sovelluslogiikasta vastaavat Service luokka ja password_generator-metodi testataan automaattisilla testeillä.
+Sovelluslogiikasta vastaavat Service luokka ja password_generator-metodi testataan automaattisilla pytest-testeillä.
 
 ### Repositoriot
 Repositorio-luokat (UserRepo ja InfoRepo) testataan automaattisilla testeillä.
