@@ -60,13 +60,12 @@ class UserRepo:
 
         return user_by_row(row)
 
-
     def delete_users(self):
-         """Poistaa kaikki käyttäjät tietokannasta"""
+        """Poistaa kaikki käyttäjät tietokannasta"""
 
-         cursor = self.connection.cursor()
-         cursor.execute("DELETE FROM Users")
-         self.connection.commit()
+        cursor = self.connection.cursor()
+        cursor.execute("DELETE FROM Users")
+        self.connection.commit()
 
 
 user_repository = UserRepo(get_database_connection())

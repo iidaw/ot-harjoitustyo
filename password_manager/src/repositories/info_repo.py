@@ -57,14 +57,13 @@ class InfoRepo:
 
         return pw_list
 
-
     def delete_password_info(self):
-         """Poistaa kaikki salasanat tietokannasta
-         """
+        """Poistaa kaikki salasanat tietokannasta
+        """
 
-         cursor = self.connection.cursor()
-         cursor.execute("DELETE FROM Passwords")
-         self.connection.commit()
+        cursor = self.connection.cursor()
+        cursor.execute("DELETE FROM Passwords")
+        self.connection.commit()
 
 
 info_repo = InfoRepo(get_database_connection())
