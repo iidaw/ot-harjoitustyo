@@ -1,5 +1,5 @@
 # Käyttöohje
-Lataa projektin viimeinen [release](https://github.com/iidaw/ot-harjoitustyo/releases/tag/loppupalautus).
+Lataa projektin viimeinen [release](https://github.com/iidaw/python-password-manager/releases/tag/Loppupalautus).
 
 ## Ohjelman käynnistäminen
 Asenna riippuvuudet ennen käynnistämistä komennolla (password_manager hakemistossa):
