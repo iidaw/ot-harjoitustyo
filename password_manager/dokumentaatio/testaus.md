@@ -11,7 +11,8 @@ Repositorio-luokat (UserRepo ja InfoRepo) testataan automaattisilla testeillä.
 ### Testauskattavuus
 Ilman käyttöliittymän testausta testauksen haarautumiskattavuus on 88%
 
-<img width="845" alt="Näyttökuva 2022-5-12 kello 14 43 09" src="https://user-images.githubusercontent.com/90407612/168067310-008bee4f-a9b4-4022-b5ca-e14d81ff9141.png">
+<img width="855" alt="Näyttökuva 2022-5-12 kello 21 31 06" src="https://user-images.githubusercontent.com/90407612/168144462-a3e3a9be-04f1-4af8-bd2c-608d8a8e58f0.png">
+
 
 
 
