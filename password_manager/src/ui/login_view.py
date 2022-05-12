@@ -1,5 +1,4 @@
 from tkinter import ttk, constants, messagebox
-#from entities.user import User
 from service.service import Service, InvalidCredentialsError
 
 
