@@ -54,7 +54,7 @@ Klikkaamalla "Generate Password" painiketta, pääsee generoimaan haluamansa pit
 ### Huomioitavaa käytössä
 Tässä mainittuna ohjelmaan jääneet puutteet.
 
-Ohjelma ei tällä hetkellä ilmoita jos on luomassa uutta käyttäjää ja kyseinen käyttäjätunnus onkin jo olemassa. Ohjelma antaa ilmoituksen, kun käyttäjätunnus on luotu onnistuneesti. Jos ei tule ilmoitusta, käyttäjätunnus on mahdollisesti jo olemassa, siinä tapauksessa yritä luoda käyttäjä toisella tunnuksella.
+Ohjelma ei tällä hetkellä ilmoita jos on luomassa uutta käyttäjää ja kyseinen käyttäjätunnus onkin jo olemassa (virheilmoitus tulee komentoriville). Ohjelma antaa ilmoituksen, kun käyttäjätunnus on luotu onnistuneesti. Jos ei tule ilmoitusta, käyttäjätunnus on mahdollisesti jo olemassa, siinä tapauksessa yritä luoda käyttäjä toisella tunnuksella.
 
-Ohjelma ei myöskään tällä hetkellä ilmoita, jos yrittää kirjautua sisään käyttäjällä jota ei ole olemassa. Ohjelma ilmoittaa "Invalid username or password" jos yrittää kirjautua tunnuksella, jolla on väärä salasana. Jos yrittää kirjautua sisälle, eikä se onnistu eikä tule ilmoituksia, ei käyttäjätunnusta ole olemassa.
+Ohjelma ei myöskään tällä hetkellä ilmoita, jos yrittää kirjautua sisään käyttäjällä jota ei ole olemassa (virheilmoitus tulee kometoriville). Ohjelma ilmoittaa "Invalid username or password" jos yrittää kirjautua tunnuksella, jolla on väärä salasana. Jos yrittää kirjautua sisälle, eikä se onnistu eikä tule ilmoituksia, ei käyttäjätunnusta ole olemassa.
 
